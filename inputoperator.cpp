@@ -21,4 +21,8 @@ int main()
   cout<<"hasil Dari "<<x<<" dibagi "<<y<<" adalah "<<x/y<<endl;
   //disini saya output kan nilai dari variabel Modulus x % y
   cout<<"hasil Dari "<<x<<" modulus "<<y<<" adalah "<<x%y<<endl;
+   //disini saya output kan nilai dari operator Increment Variabel x
+  cout<<"hasil Dari "<<x<<" ditambah operator Increment Adalah = "<<++x<<endl;
+    //disini saya output kan nilai dari operator Increment Variabel x
+  cout<<"hasil Dari "<<x<<" ditambah operator Decrement Adalah = "<<--x<<endl;
 }
