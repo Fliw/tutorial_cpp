@@ -18,4 +18,10 @@ int main()
   cout<<"apakah x lebih kecil dengan y ? = "<<(x<y)<<endl;
    cout<<"apakah x lebih besar atau setara dengan y ? = "<<(x>=y)<<endl;
     cout<<"apakah x lebih kecil atau setara dengan y ? = "<<(x<=y)<<endl;
+    cout<<"apakah x lebih kecil dari y dan y lebih besar daripada x ? = "<<(x<y && y>x)<<endl;
+    cout<<"apakah x lebih besar dari y dan y lebih kecil daripada x ? = "<<(x>y && y>x)<<endl;
+    //logika or itu, benar jika salah satu benar
+    cout<<"apakah x lebih kecil dari y Atau y lebih kecil daripada x ? = "<<(x>y || y>x)<<endl;
+    //logika not itu, bakal merubah nilai 1 menjadi 0 begitupun sebaliknya
+    cout<<"apakah tidak benar bahwa x lebih kecil dari y Atau y lebih kecil daripada x ? = "<<(!(x>y || y>x))<<endl;
 }
