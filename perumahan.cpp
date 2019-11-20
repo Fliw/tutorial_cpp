@@ -7,6 +7,17 @@ bool Cek_Nomor(const string& s)
     while (it != s.end() && isdigit(*it)) ++it;
     return !s.empty() && it == s.end();
 }
+int angsurann(int cicilan,int bungan,float angsurann){
+    return (angsurann/cicilan);
+    return (angsurann*(bungan/100)/cicilan);
+    return (angsurann/cicilan+bungan);
+}
+int cicilann(float cicilan,float angsurann){
+    return angsurann/cicilan;
+}
+int bungaa(int cicilan,float angsurann,int bunga){
+    return (angsurann*(bunga/100)/cicilan);
+}
 int main(){
     int no_blok;
     char pembeli[50];
@@ -19,7 +30,7 @@ int main(){
     cout<<"|=================================|"<<endl;
     cout<<"Nama Pembeli = ";
     cin>>pembeli;
-      regex y("[a-zA-Z]+");
+    regex y("[a-zA-Z]+");
     if ( regex_match(pembeli, y) ) 
         goto alamat;
     else {
@@ -167,9 +178,12 @@ int main(){
         keramik=15000000;
     }
     else {
-        system("clear");
+        system("clear");         
+        cin.clear();
+        cin.ignore();
         cout<<"Tolong Isi Dengan Benar !"<<endl;
         goto empat;
+        cin >> keramik;
     }
         lima:
     cout<<"|=================================|"<<endl;
@@ -205,9 +219,12 @@ int main(){
         cout<<"Jumlah Kamar = empat, harga Rp.73jt"<<endl;
     }
     else {
-        system("clear");
+        system("clear");         
+        cin.clear();
+        cin.ignore();
         cout<<"Tolong Isi Dengan Benar !"<<endl;
         goto lima;
+        cin >> kamar;
     }
         enam:
     cout<<"|=======================================================|"<<endl;
@@ -243,19 +260,37 @@ int main(){
         cout<<"Fasilitas = AC,TV,Sofa,Springbed,Kulkas,Buffet Display. Harga Rp.44jt"<<endl;
     }
     else {
-        system("clear");
+        system("clear");         
+        cin.clear();
+        cin.ignore();
         cout<<"Tolong Isi Dengan Benar !"<<endl;
         goto enam;
+        cin >> fasi;
     }
     dp:
     int total=(hargatnh+hargamodel+keramik+kamar+fasi);
     cout<<"Harga Total = Rp."<<(total/1000000)<<"jt"<<endl;
+    cout<<"Pilih Metode Pembayaran !\n";
+    cout<<"1.Cash\n";
+    cout<<"2.Angsuran\n";
+    int meto;
+    cin>>meto;
+    if(meto==1){
+        goto akhir;
+    }
+    else if(meto==2){
+        goto angsur;
+    }
+    else {
+
+    }
+    angsur:
     cout<<"Masukkan DP(jt)= Rp.";
     int dp;
     float angsuran;
     cin>>dp;
     if(dp>total/1000000){
-        cout<<"#####DP Harus Kurang Dari Harga Total !####";
+        cout<<"#####DP Harus Kurang Dari Harga Total !####\n";
         goto dp;
     }
     cout<<endl;
@@ -289,8 +324,6 @@ int main(){
         cicilan = 12;
         bunga = 2;
         bayar = (angsuran/12);
-        bunga= (angsuran*0.02)/12;
-        harga= bayar+bunga;
     }
     else if(pildp==3){
         cicilan = 24;
@@ -335,17 +368,21 @@ int main(){
         harga= bayar+bunga;
     }
     else {
-        system("clear");
+         system("clear");         
+        cin.clear();
+        cin.ignore();
         cout<<"Tolong Isi Dengan Benar !"<<endl;
         goto tujuh;
+        cin >> pildp;
     }
-    cout<<"cicilan Pokok = Rp."<<(bayar/1000000)<<"jt"<<endl;
-    cout<<"Angsuran yang anda pilih = "<<cicilan<<" bulan, Dengan Bunga = Rp."<<(bunga/1000)<<"rb"<<endl;
-    cout<<"Anda Diharuskan Membayar = "<<(harga/1000)<<"rb /bulan"<<endl;
+    cout<<"cicilan Pokok = Rp."<<bayar/1000000<<"jt"<<endl;
+    cout<<"Angsuran yang anda pilih = "<<cicilan<<" bulan, Dengan Bunga = Rp."<<bunga/100<<"rb"<<endl;
+    cout<<"Anda Diharuskan Membayar = "<<harga/1000<<"rb /bulan"<<endl;
+    akhir:
     cout<<"Konfirmasi y/n ?";
     string x;
     cin>>x;
-    if (x=="y"){
+    if (x=="y" || x=="Y"){
         system("clear");
         cout<<"|==========================================================================|"<<endl;
         cout<<"|                      Perumahan Griya Indah Yogya                         |"<<endl;
@@ -370,16 +407,17 @@ int main(){
         cout<<endl<<endl<<"Konfirmasi y/n ? =";
         string y;
         cin>>y;
-        if (y=="y"){
-            cout<<"################################################################"<<endl;
-            cout<<"Terimakasih Telah Membeli Rumah Di Perumahan Griya Indah Yogya !"<<endl;
-            cout<<"################################################################"<<endl;
+        if (y=="y" || y=="Y"){
+            cout<<"######################################################################"<<endl;
+            cout<<"   Terimakasih Telah Membeli Rumah Di Perumahan Griya Indah Yogya !   "<<endl;
+            cout<<"######################################################################"<<endl;
         }
         else if (y=="n"){
             goto awal;
         }
         else {
             cout<<"Isi Dengan Benar !";
+            goto awal;
         }
     }
     else if(x=="n"){
@@ -387,5 +425,6 @@ int main(){
     }
     else {
         cout<<"isi Dengan Benar !";
+        goto tujuh;
     }
 }
