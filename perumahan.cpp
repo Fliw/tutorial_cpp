@@ -1,8 +1,17 @@
 #include <iostream>
+#include <regex>
 using namespace std;
+bool Cek_Nomor(const string& s)
+{
+    string::const_iterator it = s.begin();
+    while (it != s.end() && isdigit(*it)) ++it;
+    return !s.empty() && it == s.end();
+}
 int main(){
     int no_blok;
-    string no,alamat,pembeli,blok;
+    char pembeli[50];
+    char alamat[100];
+    string blok,no;
     awal:
     cout<<"|=================================|"<<endl;
     cout<<"|   Perumahan Griya Indah Yogya   |"<<endl;
@@ -10,10 +19,27 @@ int main(){
     cout<<"|=================================|"<<endl;
     cout<<"Nama Pembeli = ";
     cin>>pembeli;
+      regex y("[a-zA-Z]+");
+    if ( regex_match(pembeli, y) ) 
+        goto alamat;
+    else {
+        system("clear");
+        cout<<"Nama Hanya Bisa Diisi Oleh Huruf, Tidak Boleh Angka !\n";
+        goto awal;
+    }
+    alamat:
     cout<<endl<<"Alamat Pembeli = ";
     cin>>alamat;
-    cout<<endl<<"No Telp Pembeli = ";
+    no:
+    cout<<endl<<"No Telp Pembeli = +62 ";
     cin>>no;
+    if(Cek_Nomor(no)){
+        goto satu;
+    }
+    else{
+        cout<<"Nomor Hanya Bisa diisi Oleh Angka !\n";
+        goto no;
+    }
         satu:
     cout<<endl<<"|==================================|"<<endl;
     cout<<"|         PILIHAN BLOK RUMAH       |"<<endl;
@@ -42,9 +68,12 @@ int main(){
         cout<<"blok Rumah = D"<<endl;
     }
     else {
-        system("clear");
+        system("clear");         
+        cin.clear();
+        cin.ignore();
         cout<<"Tolong Isi Dengan Benar !"<<endl;
         goto satu;
+        cin >> no_blok;
     }
         dua:
     cout<<"|=========================================================|"<<endl;
@@ -74,9 +103,12 @@ int main(){
         hargatnh=250100000;
     }
     else {
-        system("clear");
+        system("clear");         
+        cin.clear();
+        cin.ignore();
         cout<<"Tolong Isi Dengan Benar !"<<endl;
         goto dua;
+        cin >> tipe;
     }
     tiga:
     cout<<endl<<"|=====================================|"<<endl;
@@ -100,9 +132,12 @@ int main(){
         cout<<"Model Bangunan = 1 Lantai, Harga Rp.70jt"<<endl;
     }
     else {
-        system("clear");
+        system("clear");         
+        cin.clear();
+        cin.ignore();
         cout<<"Tolong Isi Dengan Benar !"<<endl;
         goto tiga;
+        cin >> hargamodel;
     }
         empat:
     cout<<"|=================================|"<<endl;
@@ -212,12 +247,17 @@ int main(){
         cout<<"Tolong Isi Dengan Benar !"<<endl;
         goto enam;
     }
+    dp:
     int total=(hargatnh+hargamodel+keramik+kamar+fasi);
     cout<<"Harga Total = Rp."<<(total/1000000)<<"jt"<<endl;
     cout<<"Masukkan DP(jt)= Rp.";
     int dp;
     float angsuran;
     cin>>dp;
+    if(dp>total/1000000){
+        cout<<"#####DP Harus Kurang Dari Harga Total !####";
+        goto dp;
+    }
     cout<<endl;
     angsuran=(total-(dp*1000000));
     cout<<"Harga Sekarang Rp."<<(angsuran/1000000)<<"jt"<<endl;
