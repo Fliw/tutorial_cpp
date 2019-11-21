@@ -29,9 +29,9 @@ int main(){
     cout<<"|      No Telp: 08381094983       |"<<endl;
     cout<<"|=================================|"<<endl;
     cout<<"Nama Pembeli = ";
-    cin>>pembeli;
-    regex y("[a-zA-Z]+");
-    if ( regex_match(pembeli, y) ) 
+    cin.getline(pembeli,sizeof(pembeli));
+    regex y("[a-z A-Z]+");
+    if ( regex_match(pembeli, y)) 
         goto alamat;
     else {
         system("clear");
@@ -40,11 +40,16 @@ int main(){
     }
     alamat:
     cout<<endl<<"Alamat Pembeli = ";
-    cin>>alamat;
+    cin.getline(alamat,sizeof(alamat));
     no:
     cout<<endl<<"No Telp Pembeli = +62 ";
     cin>>no;
+    int panjang= no.size();
     if(Cek_Nomor(no)){
+        while(panjang <= 9 || panjang >= 13){
+            cout<<"Nomor Yang Anda Masukkan Salah !";
+            goto no;
+        }
         goto satu;
     }
     else{
@@ -281,8 +286,13 @@ int main(){
     else if(meto==2){
         goto angsur;
     }
-    else {
-
+    else{
+        system("clear");         
+        cin.clear();
+        cin.ignore();
+        cout<<"Tolong Isi Dengan Benar !"<<endl;
+        goto dp;
+        cin >> meto;
     }
     angsur:
     cout<<"Masukkan DP(jt)= Rp.";
@@ -292,6 +302,14 @@ int main(){
     if(dp>total/1000000){
         cout<<"#####DP Harus Kurang Dari Harga Total !####\n";
         goto dp;
+    }
+    else if(cin.fail()){
+        system("clear");         
+        cin.clear();
+        cin.ignore();
+        cout<<"Tolong Isi Dengan Benar !"<<endl;
+        goto angsur;
+        cin >> dp;
     }
     cout<<endl;
     angsuran=(total-(dp*1000000));
@@ -412,19 +430,19 @@ int main(){
             cout<<"   Terimakasih Telah Membeli Rumah Di Perumahan Griya Indah Yogya !   "<<endl;
             cout<<"######################################################################"<<endl;
         }
-        else if (y=="n"){
-            goto awal;
+        else if (y=="n" || y=="N"){
+            goto dp;
         }
         else {
             cout<<"Isi Dengan Benar !";
-            goto awal;
+            goto dp;
         }
     }
-    else if(x=="n"){
-        goto tujuh;
+    else if(x=="n" || x=="N"){
+        goto dp;
     }
     else {
         cout<<"isi Dengan Benar !";
-        goto tujuh;
+        goto dp;
     }
 }
