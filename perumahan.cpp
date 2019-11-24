@@ -1,5 +1,6 @@
 #include <iostream>
 #include <regex>
+
 using namespace std;
 bool Cek_Nomor(const string& s)
 {
@@ -7,35 +8,40 @@ bool Cek_Nomor(const string& s)
     while (it != s.end() && isdigit(*it)) ++it;
     return !s.empty() && it == s.end();
 }
-int angsurann(int cicilan,int bungan,float angsurann){
-    return (angsurann/cicilan);
-    return (angsurann*(bungan/100)/cicilan);
-    return (angsurann/cicilan+bungan);
-}
-int cicilann(float cicilan,float angsurann){
+int cicilann(int cicilan, float angsurann){
     return angsurann/cicilan;
 }
-int bungaa(int cicilan,float angsurann,int bunga){
-    return (angsurann*(bunga/100)/cicilan);
+int bungaa(int cicilan,float angsurann, float bunga){
+    return angsurann*bunga/cicilan;
+}
+
+void delay(int delay)
+{
+ int now=time(NULL);
+ int later=now+delay;
+ while(now<=later)now=time(NULL);
 }
 int main(){
+    system("clear");
     int no_blok;
     char pembeli[50];
-    char alamat[100];
+    char alamat[200];
     string blok,no;
     awal:
-    cout<<"\033[48;5;21m|=================================|\x1B[0m"<<endl;
-    cout<<"\033[48;5;57m|   Perumahan Griya Indah Yogya   |\x1B[0m"<<endl;
-    cout<<"\033[48;5;93m|      No Telp: 08381094983       |\x1B[0m"<<endl;
-    cout<<"\033[48;5;129m|=================================|\x1B[0m"<<endl;
+    cout<<"|=================================|"<<endl;
+    cout<<"|   Perumahan Griya Indah Yogya   |"<<endl;
+    cout<<"|      No Telp: 08381094983       |"<<endl;
+    cout<<"|=================================|"<<endl;
     cout<<"Nama Pembeli = ";
+    cin.clear();
+    cin.ignore();
     cin.getline(pembeli,sizeof(pembeli));
     regex y("[a-z A-Z]+");
     if ( regex_match(pembeli, y)) 
         goto alamat;
     else {
         system("clear");
-        cout<<"\u001b[41;1m\u001b[34mNama Hanya Bisa Diisi Oleh Huruf, Tidak Boleh Angka !\n\x1B[0m";
+        cout<<"Nama Hanya Bisa Diisi Oleh Huruf, Tidak Boleh Angka !\n";
         goto awal;
     }
     alamat:
@@ -47,24 +53,24 @@ int main(){
     int panjang= no.size();
     if(Cek_Nomor(no)){
         while(panjang <= 6 || panjang >= 13){
-            cout<<"\u001b[41;1m\u001b[34mNomor Yang Anda Masukkan Salah !\x1B[0m";
+            cout<<"Nomor Yang Anda Masukkan Salah !\n";
             goto no;
         }
         goto satu;
     }
     else{
-        cout<<"\u001b[41;1m\u001bNomor Hanya Bisa diisi Oleh Angka !\n\x1B[0m";
+        cout<<"Nomor Hanya Bisa diisi Oleh Angka !\n";
         goto no;
     }
         satu:
-    cout<<endl<<"\033[48;5;21m|==================================|\x1B[0m"<<endl;
-    cout<<"\033[48;5;21m|         PILIHAN BLOK RUMAH       |\x1B[0m"<<endl;
-    cout<<"\033[48;5;21m|==================================|\x1B[0m"<<endl;
-     cout<<"\033[48;5;57m|1.Sebelah Utara taman (BLOK A)    |\x1B[0m"<<endl;
-    cout<<"\033[48;5;93m|2.Sebelah Selatan taman (BLOK B)  |\x1B[0m"<<endl;
-    cout<<"\033[48;5;129m|3.Sebelah Barat taman (BLOK C)    |\x1B[0m"<<endl;
-    cout<<"\033[48;5;165m|4.Sebelah Timur taman (BLOK D)    |\x1B[0m"<<endl;
-    cout<<"\033[48;5;165m|==================================|\x1B[0m"<<endl;
+    cout<<endl<<"|==================================|"<<endl;
+    cout<<"|         PILIHAN BLOK RUMAH       |"<<endl;
+    cout<<"|==================================|"<<endl;
+    cout<<"|1.Sebelah Utara taman    (BLOK A) |"<<endl;
+    cout<<"|2.Sebelah Selatan taman  (BLOK B) |"<<endl;
+    cout<<"|3.Sebelah Barat taman    (BLOK C) |"<<endl;
+    cout<<"|4.Sebelah Timur taman    (BLOK D) |"<<endl;
+    cout<<"|==================================|"<<endl;
     cout<<"Pilih Nomor Blok Rumah = ";
     cin>>no_blok;
     if(no_blok==1){
@@ -87,18 +93,18 @@ int main(){
         system("clear");         
         cin.clear();
         cin.ignore();
-        cout<<"\u001b[41;1m\u001b[34m Tolong Isi Dengan Benar !\x1B[0m"<<endl;
+        cout<<"Tolong Isi Dengan Benar !"<<endl;
         goto satu;
         cin >> no_blok;
     }
         dua:
-    cout<<"\033[48;5;21m|=========================================================|\x1B[0m"<<endl;
-    cout<<"\033[48;5;57m|                     PILIHAN LUAS TANAH                  |\x1B[0m"<<endl;
-    cout<<"\033[48;5;93m|=========================================================|\x1B[0m"<<endl;
-    cout<<"\033[48;5;129m|1.luas bangunan=7x10m, Luas Tanah=8x11m  = Rp.125.000.000|\x1B[0m"<<endl;
-    cout<<"\033[48;5;165m|2.Luas Bangunan=8x11m, Luas Tanah=9x15m  = Rp.175.000.000|\x1B[0m"<<endl;
-    cout<<"\033[48;5;201m|3.Luas Bangunan=9x12m, Luas Tanah=10x19m = Rp.250.000.000|\x1B[0m"<<endl;
-    cout<<"\033[48;5;201m|=========================================================|\x1B[0m"<<endl;
+    cout<<"|=========================================================|"<<endl;
+    cout<<"|                     PILIHAN LUAS TANAH                  |"<<endl;
+    cout<<"|=========================================================|"<<endl;
+    cout<<"|1.luas bangunan=7x10m, Luas Tanah=8x11m  = Rp.125.000.000|"<<endl;
+    cout<<"|2.Luas Bangunan=8x11m, Luas Tanah=9x15m  = Rp.175.000.000|"<<endl;
+    cout<<"|3.Luas Bangunan=9x12m, Luas Tanah=10x19m = Rp.250.000.000|"<<endl;
+    cout<<"|=========================================================|"<<endl;
     cout<<"pilih Nomor Sesuai Yang anda Inginkan = ";
     int tipe,hargatnh;
     string luas;
@@ -122,17 +128,17 @@ int main(){
         system("clear");         
         cin.clear();
         cin.ignore();
-        cout<<"\u001b[41;1m\u001bTolong Isi Dengan Benar !\x1B[0m"<<endl;
+        cout<<"Tolong Isi Dengan Benar !"<<endl;
         goto dua;
         cin >> tipe;
     }
     tiga:
-    cout<<endl<<"\033[48;5;21m|=====================================|\x1B[0m"<<endl;
-    cout<<"\033[48;5;57m|            Model Bangunan           |\x1B[0m"<<endl;
-    cout<<"\033[48;5;93m|=====================================|\x1B[0m"<<endl;
-    cout<<"\033[48;5;129m|1.Bertingkat     = Rp.100jt          |\x1B[0m"<<endl;
-    cout<<"\033[48;5;165m|2.Hanya 1 lantai = Rp.70jt           |\x1B[0m"<<endl;
-    cout<<"\033[48;5;201m|=====================================|\x1B[0m"<<endl;
+    cout<<endl<<"|=====================================|"<<endl;
+    cout<<"|            Model Bangunan           |"<<endl;
+    cout<<"|=====================================|"<<endl;
+    cout<<"|1.Bertingkat     = Rp.100jt          |"<<endl;
+    cout<<"|2.Hanya 1 lantai = Rp.70jt           |"<<endl;
+    cout<<"|=====================================|"<<endl;
     cout<<"Silahkan Pilih Nomor Model Bangunan = ";
     int hargamodel;
     string model;
@@ -151,18 +157,18 @@ int main(){
         system("clear");         
         cin.clear();
         cin.ignore();
-        cout<<"\u001b[41;1m\u001bTolong Isi Dengan Benar !\x1B[0m"<<endl;
+        cout<<"Tolong Isi Dengan Benar !"<<endl;
         goto tiga;
         cin >> hargamodel;
     }
         empat:
-    cout<<"\033[48;5;21m|=================================|\x1B[0m"<<endl;
-    cout<<"\033[48;5;21m|       MODEL KERAMIK LANTAI      |\x1B[0m"<<endl;
-    cout<<"\033[48;5;57m|=================================|\x1B[0m"<<endl;
-    cout<<"\033[48;5;93m|1.Keramik Biasa = Rp.10jt        |\x1B[0m"<<endl;
-    cout<<"\033[48;5;129m|2.Keramik Terazzo = Rp.13jt      |\x1B[0m"<<endl;
-    cout<<"\033[48;5;165m|3.Keramik Granit = Rp.15jt       |\x1B[0m"<<endl;
-    cout<<"\033[48;5;201m|=================================|\x1B[0m"<<endl;
+    cout<<"|=================================|"<<endl;
+    cout<<"|       MODEL KERAMIK LANTAI      |"<<endl;
+    cout<<"|=================================|"<<endl;
+    cout<<"|1.Keramik Biasa =    Rp.10jt     |"<<endl;
+    cout<<"|2.Keramik Terazzo =  Rp.13jt     |"<<endl;
+    cout<<"|3.Keramik Granit =   Rp.15jt     |"<<endl;
+    cout<<"|=================================|"<<endl;
     cout<<"Silahkan Pilih Nomor Keramik = ";
     int keramik;
     string tipekeramik;
@@ -186,19 +192,19 @@ int main(){
         system("clear");         
         cin.clear();
         cin.ignore();
-        cout<<"\u001b[41;1m\u001bTolong Isi Dengan Benar !\x1B[0m"<<endl;
+        cout<<"Tolong Isi Dengan Benar !"<<endl;
         goto empat;
         cin >> keramik;
     }
         lima:
-    cout<<"\033[48;5;21m|=================================|\x1B[0m"<<endl;
-    cout<<"\033[48;5;21m|     Jumlah Kamar Dalam Rumah    |\x1B[0m"<<endl;
-    cout<<"\033[48;5;57m|=================================|\x1B[0m"<<endl;
-    cout<<"\033[48;5;93m|1.Satu kamar  = Rp.30jt          |\x1B[0m"<<endl;
-    cout<<"\033[48;5;129m|2.dua kamar   = Rp.50jt          |\x1B[0m"<<endl;
-    cout<<"\033[48;5;165m|3.tiga kamar  = Rp.65jt          |\x1B[0m"<<endl;
-    cout<<"\033[48;5;201m|4.empat kamar = Rp.73jt          |\x1B[0m"<<endl;
-    cout<<"\033[48;5;201m|=================================|\x1B[0m"<<endl;
+    cout<<"|=================================|"<<endl;
+    cout<<"|     Jumlah Kamar Dalam Rumah    |"<<endl;
+    cout<<"|=================================|"<<endl;
+    cout<<"|1.Satu kamar  = Rp.30jt          |"<<endl;
+    cout<<"|2.dua kamar   = Rp.50jt          |"<<endl;
+    cout<<"|3.tiga kamar  = Rp.65jt          |"<<endl;
+    cout<<"|4.empat kamar = Rp.73jt          |"<<endl;
+    cout<<"|=================================|"<<endl;
     cout<<"Silahkan Pilih Nomor Kamar = ";
     int kamar;
     string tipekamar;
@@ -227,19 +233,19 @@ int main(){
         system("clear");         
         cin.clear();
         cin.ignore();
-        cout<<"\u001b[41;1m\u001bTolong Isi Dengan Benar !\x1B[0m"<<endl;
+        cout<<"Tolong Isi Dengan Benar !"<<endl;
         goto lima;
         cin >> kamar;
     }
         enam:
-    cout<<"\033[48;5;21m|=======================================================|\x1B[0m"<<endl;
-    cout<<"\033[48;5;21m|                    FASILITAS RUMAH                    |\x1B[0m"<<endl;
-    cout<<"\033[48;5;57m|=======================================================|\x1B[0m"<<endl;
-    cout<<"\033[48;5;93m|1.AC,TV,Sofa                                = Rp.25jt  |\x1B[0m"<<endl;
-    cout<<"\033[48;5;129m|2.AC,TV,Sofa,Springbed                      = Rp.31jt  |\x1B[0m"<<endl;
-    cout<<"\033[48;5;165m|3.AC,TV,Sofa,Springbed,Kulkas               = Rp.37jt  |\x1B[0m"<<endl;
-    cout<<"\033[48;5;201m|4.AC,TV,Sofa,Springbed,Kulkas,Bufet Display = Rp.44jt  |\x1B[0m"<<endl;
-    cout<<"\033[48;5;201m|=======================================================|\x1B[0m"<<endl;
+    cout<<"|=======================================================|"<<endl;
+    cout<<"|                    FASILITAS RUMAH                    |"<<endl;
+    cout<<"|=======================================================|"<<endl;
+    cout<<"|1.AC,TV,Sofa                                = Rp.25jt  |"<<endl;
+    cout<<"|2.AC,TV,Sofa,Springbed                      = Rp.31jt  |"<<endl;
+    cout<<"|3.AC,TV,Sofa,Springbed,Kulkas               = Rp.37jt  |"<<endl;
+    cout<<"|4.AC,TV,Sofa,Springbed,Kulkas,Bufet Display = Rp.44jt  |"<<endl;
+    cout<<"|=======================================================|"<<endl;
     cout<<"Silahkan Pilih No fasilitas Rumah = ";
     int fasi;
     string fasili;
@@ -268,7 +274,7 @@ int main(){
         system("clear");         
         cin.clear();
         cin.ignore();
-        cout<<"\u001b[41;1m\u001bTolong Isi Dengan Benar !\x1B[0m"<<endl;
+        cout<<"Tolong Isi Dengan Benar !"<<endl;
         goto enam;
         cin >> fasi;
     }
@@ -290,7 +296,7 @@ int main(){
         system("clear");         
         cin.clear();
         cin.ignore();
-        cout<<"\u001b[41;1m\u001bTolong Isi Dengan Benar !\x1B[0m"<<endl;
+        cout<<"Tolong Isi Dengan Benar !"<<endl;
         goto dp;
         cin >> meto;
     }
@@ -300,14 +306,14 @@ int main(){
     float angsuran;
     cin>>dp;
     if(dp>total/1000000){
-        cout<<"\u001b[41;1m\u001b #####DP Harus Kurang Dari Harga Total !####\x1B[0m \n";
+        cout<<" #####DP Harus Kurang Dari Harga Total !#### \n";
         goto dp;
     }
     else if(cin.fail()){
         system("clear");         
         cin.clear();
         cin.ignore();
-        cout<<"\u001b[41;1m\u001bTolong Isi Dengan Benar !\x1B[0m"<<endl;
+        cout<<"Tolong Isi Dengan Benar !"<<endl;
         goto angsur;
         cin >> dp;
     }
@@ -315,96 +321,111 @@ int main(){
     angsuran=(total-(dp*1000000));
     cout<<"Harga Sekarang Rp."<<(angsuran/1000000)<<"jt"<<endl;
         tujuh:
-    cout<<"\033[48;5;21m|================================|\x1B[0m"<<endl;
-    cout<<"\033[48;5;21m|    Biaya Angsuran Per Bulan    |\x1B[0m"<<endl;
-    cout<<"\033[48;5;57m|================================|\x1B[0m"<<endl;
-    cout<<"\033[48;5;57m|1.Angsuran 6 Bulan, Bunga = 1%  |\x1B[0m"<<endl;
-    cout<<"\033[48;5;93m|2.Angsuran 12 Bulan, Bunga = 2% |\x1B[0m"<<endl;
-    cout<<"\033[48;5;93m|3.Angsuran 24 Bulan, Bunga = 3% |\x1B[0m"<<endl;
-    cout<<"\033[48;5;129m|4.Angsuran 36 Bulan, Bunga = 4% |\x1B[0m"<<endl;
-    cout<<"\033[48;5;129m|5.Angsuran 48 Bulan, Bunga = 5% |\x1B[0m"<<endl;
-    cout<<"\033[48;5;165m|6.Angsuran 60 Bulan, Bunga = 6% |\x1B[0m"<<endl;
-    cout<<"\033[48;5;165m|7.Angsuran 72 Bulan, Bunga = 7% |\x1B[0m"<<endl;
-    cout<<"\033[48;5;201m|8.Angsuran 84 Bulan, Bunga = 8% |\x1B[0m"<<endl;
-    cout<<"\033[48;5;201m|================================|\x1B[0m"<<endl;
+    cout<<"|===================================|"<<endl;
+    cout<<"|        Biaya Angsuran Per Bulan   |"<<endl;
+    cout<<"|===================================|"<<endl;
+    cout<<"|1.Angsuran 6 Bulan, Bunga = 1%     |"<<endl;
+    cout<<"|2.Angsuran 12 Bulan, Bunga = 2%    |"<<endl;
+    cout<<"|3.Angsuran 24 Bulan, Bunga = 3%    |"<<endl;
+    cout<<"|4.Angsuran 36 Bulan, Bunga = 4%    |"<<endl;
+    cout<<"|5.Angsuran 48 Bulan, Bunga = 5%    |"<<endl;
+    cout<<"|6.Angsuran 60 Bulan, Bunga = 6%    |"<<endl;
+    cout<<"|7.Angsuran 72 Bulan, Bunga = 7%    |"<<endl;
+    cout<<"|8.Angsuran 84 Bulan, Bunga = 8%    |"<<endl;
+    cout<<"|9.Angsuran 96 Bulan, Bunga = 9%    |"<<endl;
+    cout<<"|10.Angsuran 108 Bulan, Bunga = 10% |"<<endl;
+    cout<<"|11.Angsuran 120 Bulan, Bunga = 11% |"<<endl;
+    cout<<"|===================================|"<<endl;
     cout<<"Masukkan Pilihan Angsuran Anda = ";
-    int cicilan,bunga,harga,pildp;
-    float bayar;
+    int cicilan,pildp;
+    float bayar,bunga,bungas,harga;
     cin>>pildp;
     if(pildp==1){
         cicilan = 6;
-        bunga = 1;
-        bayar = (angsuran/6);
-        bunga= (angsuran*0.01)/6;
+        bayar=cicilann(6,angsuran);
+        bunga = bungaa(6,angsuran,1)/100;
         harga= bayar+bunga;
     }
     else if(pildp==2){
         cicilan = 12;
-        bunga = 2;
-        bayar = (angsuran/12);
+        bayar=cicilann(12,angsuran);
+        bunga = bungaa(12,angsuran,2)/100;
+        harga= bayar+bunga;
     }
     else if(pildp==3){
         cicilan = 24;
-        bunga = 3;
-        bayar = (angsuran/24);
-        bunga= (angsuran*0.03)/24;
+        bayar=cicilann(24,angsuran);
+        bunga = bungaa(24,angsuran,3)/100;
         harga= bayar+bunga;
     }
     else if(pildp==4){
         cicilan = 36;
-        bunga = 3;
-        bayar = (angsuran/36);
-        bunga= (angsuran*0.03)/36;
+        bayar=cicilann(36,angsuran);
+        bunga = bungaa(6,angsuran,4)/100;
         harga= bayar+bunga;
     }
     else if(pildp==5){
         cicilan = 48;
-        bunga = 4;
-        bayar = (angsuran/48);
-        bunga= (angsuran*0.04)/48;
+        bayar=cicilann(48,angsuran);
+        bunga = bungaa(48,angsuran,5)/100;
         harga= bayar+bunga;
     }
     else if(pildp==6){
         cicilan = 60;
-        bunga = 5;
-        bayar = (angsuran/60);
-        bunga= (angsuran*0.05)/60;
+        bayar=cicilann(60,angsuran);
+        bunga = bungaa(60,angsuran,6)/100;
         harga= bayar+bunga;
     }
     else if(pildp==7){
         cicilan = 72;
-        bunga = 6;
-        bayar = (angsuran/72);
-        bunga= (angsuran*0.06)/72;
+        bayar=cicilann(72,angsuran);
+        bunga = bungaa(72,angsuran,7)/100;
         harga= bayar+bunga;
     }
     else if(pildp==8){
         cicilan = 84;
-        bunga = 7;
-        bayar = (angsuran/84);
-        bunga= (angsuran*0.07)/84;
+        bayar=cicilann(84,angsuran);
+        bunga = bungaa(84,angsuran,8)/100;
+        harga= bayar+bunga;
+    }
+    else if(pildp==9){
+        cicilan = 96;
+        bayar=cicilann(96,angsuran);
+        bunga = bungaa(96,angsuran,9)/100;
+        harga= bayar+bunga;
+    }
+    else if(pildp==10){
+        cicilan = 108;
+        bayar=cicilann(108,angsuran);
+        bunga = bungaa(108,angsuran,10)/100;
+        harga= bayar+bunga;
+    }
+    else if(pildp==11){
+        cicilan = 120;
+        bayar=cicilann(120,angsuran);
+        bunga = bungaa(120,angsuran,11)/100;
         harga= bayar+bunga;
     }
     else {
         system("clear");         
         cin.clear();
         cin.ignore();
-        cout<<"\u001b[41;1m\u001bTolong Isi Dengan Benar !\x1B[0m"<<endl;
+        cout<<"Tolong Isi Dengan Benar !"<<endl;
         goto tujuh;
         cin >> pildp;
     }
     cout<<"cicilan Pokok = Rp."<<bayar/1000000<<"jt"<<endl;
-    cout<<"Angsuran yang anda pilih = "<<cicilan<<" bulan, Dengan Bunga = Rp."<<bunga/100<<"rb"<<endl;
-    cout<<"Anda Diharuskan Membayar = "<<harga/1000<<"rb /bulan"<<endl;
+    cout<<"Tenor yang anda pilih = "<<cicilan<<" bulan, Dengan Bunga = Rp."<<bunga/1000<<"rb"<<endl;
+    cout<<"Anda Diharuskan Membayar = "<<harga/1000000<<"jt /bulan"<<endl;
     akhir:
     cout<<"Konfirmasi y/n ?";
     string x;
     cin>>x;
     if (x=="y" || x=="Y"){
         system("clear");
-        cout<<"\033[48;5;21m|==========================================================================|\x1B[0m"<<endl;
-        cout<<"\033[48;5;93m|                      Perumahan Griya Indah Yogya                         |\x1B[0m"<<endl;
-        cout<<"\033[48;5;21m|==========================================================================|\x1B[0m"<<endl;
+        cout<<"|==========================================================================|"<<endl;
+        cout<<"|                      Perumahan Griya Indah Yogya                         |"<<endl;
+        cout<<"|==========================================================================|"<<endl;
         cout<<"Nama Pembeli       = "<<pembeli<<endl;
         cout<<"Alamat Pembeli     = "<<alamat<<endl;
         cout<<"No Telp Pembeli    = "<<no<<endl;
@@ -414,35 +435,47 @@ int main(){
         cout<<"Tipe Keramik       = "<<tipekeramik<<", Harga = Rp."<<keramik/1000000<<"jt"<<endl;
         cout<<"Tipe Kamar         = "<<tipekamar<<", Harga = Rp."<<kamar/1000000<<"jt"<<endl;
         cout<<"Fasilitas          = "<<fasili<<", Harga = Rp."<<fasi/1000000<<"jt"<<endl;
-        cout<<"\033[48;5;21m|=========================================================================|\x1B[0m"<<endl;
-        cout<<"\033[48;5;93m|                              Total Biaya                                |\x1B[0m"<<endl;
-        cout<<"\033[48;5;21m|=========================================================================|\x1B[0m"<<endl;
+        cout<<"|=========================================================================|"<<endl;
+        cout<<"|                              Total Biaya                                |"<<endl;
+        cout<<"|=========================================================================|"<<endl;
         cout<<"Harga Cash         = "<<total/1000000<<"jt"<<endl;
+        cout<<"Pokok Kredit       = "<<total/1000000-dp<<" Jt"<<endl;
         cout<<"DP                 = "<<dp<<"jt"<<endl;
-        cout<<"Cicilan            = "<<cicilan<<" Bulan"<<endl;
+        cout<<"Tenor              = "<<cicilan<<" Bulan"<<endl;
         cout<<"Bunga              = "<<bunga/1000<<"rb"<<endl;
-        cout<<"Angsuran           = "<<harga/1000<<"rb/bulan"<<endl;
+        cout<<"Angsuran           = "<<harga/1000000<<"jt/bulan"<<endl;
         cout<<endl<<endl<<"Konfirmasi y/n ? =";
         string y;
         cin>>y;
         if (y=="y" || y=="Y"){
-            cout<<"\033[48;5;21m##########################################################################\x1B[0m"<<endl;
-            cout<<"\033[48;5;93m     Terimakasih Telah Membeli Rumah Di Perumahan Griya Indah Yogya !     \x1B[0m"<<endl;
-            cout<<"\033[48;5;21m##########################################################################\x1B[0m"<<endl;
+            cout<<"##########################################################################"<<endl;
+            cout<<"     Terimakasih Telah Membeli Rumah Di Perumahan Griya Indah Yogya !     "<<endl;
+            cout<<"##########################################################################"<<endl;
         }
         else if (y=="n" || y=="N"){
+            cin.clear();
+            cin.ignore();
             goto dp;
         }
         else {
-            cout<<"\u001b[41;1m\u001bIsi Dengan Benar !\x1B[0m";
+            cout<<"Isi Dengan Benar !";
+            cin.clear();
+            cin.ignore();
             goto dp;
         }
     }
     else if(x=="n" || x=="N"){
+        cin.clear();
+        cin.ignore();
         goto dp;
     }
     else {
-        cout<<"\u001b[41;1m\u001bisi Dengan Benar !\x1B[0m";
+        cout<<"isi Dengan Benar !";
+        cin.clear();
+        cin.ignore();
         goto dp;
     }
+    delay(10);
+    system("clear");
+    goto awal;
 }
