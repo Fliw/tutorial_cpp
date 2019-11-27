@@ -22,7 +22,7 @@ void delay(int delay)
  while(now<=later)now=time(NULL);
 }
 int main(){
-    system("clear");
+    system("cls");
     int no_blok;
     char pembeli[50];
     char alamat[200];
@@ -36,11 +36,11 @@ int main(){
     cin.clear();
     cin.ignore();
     cin.getline(pembeli,sizeof(pembeli));
-    regex y("[a-z A-Z]+");
+    regex y("[a-z A-Za-ZA-z]+");
     if ( regex_match(pembeli, y)) 
         goto alamat;
     else {
-        system("clear");
+        system("cls");
         cout<<"Nama Hanya Bisa Diisi Oleh Huruf, Tidak Boleh Angka !\n";
         goto awal;
     }
@@ -90,7 +90,7 @@ int main(){
         cout<<"blok Rumah = D"<<endl;
     }
     else {
-        system("clear");         
+        system("cls");         
         cin.clear();
         cin.ignore();
         cout<<"Tolong Isi Dengan Benar !"<<endl;
@@ -125,7 +125,7 @@ int main(){
         hargatnh=250100000;
     }
     else {
-        system("clear");         
+        system("cls");         
         cin.clear();
         cin.ignore();
         cout<<"Tolong Isi Dengan Benar !"<<endl;
@@ -154,7 +154,7 @@ int main(){
         cout<<"Model Bangunan = 1 Lantai, Harga Rp.70jt"<<endl;
     }
     else {
-        system("clear");         
+        system("cls");         
         cin.clear();
         cin.ignore();
         cout<<"Tolong Isi Dengan Benar !"<<endl;
@@ -189,7 +189,7 @@ int main(){
         keramik=15000000;
     }
     else {
-        system("clear");         
+        system("cls");         
         cin.clear();
         cin.ignore();
         cout<<"Tolong Isi Dengan Benar !"<<endl;
@@ -230,7 +230,7 @@ int main(){
         cout<<"Jumlah Kamar = empat, harga Rp.73jt"<<endl;
     }
     else {
-        system("clear");         
+        system("cls");         
         cin.clear();
         cin.ignore();
         cout<<"Tolong Isi Dengan Benar !"<<endl;
@@ -271,7 +271,7 @@ int main(){
         cout<<"Fasilitas = AC,TV,Sofa,Springbed,Kulkas,Buffet Display. Harga Rp.44jt"<<endl;
     }
     else {
-        system("clear");         
+        system("cls");         
         cin.clear();
         cin.ignore();
         cout<<"Tolong Isi Dengan Benar !"<<endl;
@@ -287,13 +287,56 @@ int main(){
     int meto;
     cin>>meto;
     if(meto==1){
-        goto akhir;
+    	string konfir;
+    	cout<<"Konfirmasi y/n?";
+    	cin>>konfir;
+    	if(konfir=="y" || konfir=="Y"){
+    	system("cls");
+        cout<<"|==========================================================================|"<<endl;
+        cout<<"|                      Perumahan Griya Indah Yogya                         |"<<endl;
+        cout<<"|==========================================================================|"<<endl;
+        cout<<"Nama Pembeli       = "<<pembeli<<endl;
+        cout<<"Alamat Pembeli     = "<<alamat<<endl;
+        cout<<"No Telp Pembeli    = "<<no<<endl;
+        cout<<"Blok Rumah         = "<<blok<<endl;
+        cout<<"Luas Tanah         = "<<luas<<", Harga = Rp."<<hargatnh/1000000<<"jt"<<endl;
+        cout<<"Model Bangunan     = "<<model<<", Harga = Rp."<<hargamodel/1000000<<"jt"<<endl;
+        cout<<"Tipe Keramik       = "<<tipekeramik<<", Harga = Rp."<<keramik/1000000<<"jt"<<endl;
+        cout<<"Tipe Kamar         = "<<tipekamar<<", Harga = Rp."<<kamar/1000000<<"jt"<<endl;
+        cout<<"Fasilitas          = "<<fasili<<", Harga = Rp."<<fasi/1000000<<"jt"<<endl;
+        cout<<"|=========================================================================|"<<endl;
+        cout<<"|                              Total Biaya                                |"<<endl;
+        cout<<"|=========================================================================|"<<endl;
+        cout<<"Harga Cash         = "<<total/1000000<<"jt"<<endl;
+        cout<<endl<<endl<<"Konfirmasi y/n ? =";
+        string y;
+        cin>>y;
+        if (y=="y" || y=="Y"){
+            cout<<"##########################################################################"<<endl;
+            cout<<"     Terimakasih Telah Membeli Rumah Di Perumahan Griya Indah Yogya !     "<<endl;
+            cout<<"##########################################################################"<<endl;
+        }
+        else if (y=="n" || y=="N"){
+            cin.clear();
+            cin.ignore();
+            goto dp;
+        }
+        else {
+            cout<<"Isi Dengan Benar !";
+            cin.clear();
+            cin.ignore();
+            goto dp;
+        }
+		}
+        else {
+        	goto dp;
+		}
     }
     else if(meto==2){
         goto angsur;
     }
     else{
-        system("clear");         
+        system("cls");         
         cin.clear();
         cin.ignore();
         cout<<"Tolong Isi Dengan Benar !"<<endl;
@@ -310,7 +353,7 @@ int main(){
         goto dp;
     }
     else if(cin.fail()){
-        system("clear");         
+        system("cls");         
         cin.clear();
         cin.ignore();
         cout<<"Tolong Isi Dengan Benar !"<<endl;
@@ -407,7 +450,7 @@ int main(){
         harga= bayar+bunga;
     }
     else {
-        system("clear");         
+        system("cls");         
         cin.clear();
         cin.ignore();
         cout<<"Tolong Isi Dengan Benar !"<<endl;
@@ -422,7 +465,7 @@ int main(){
     string x;
     cin>>x;
     if (x=="y" || x=="Y"){
-        system("clear");
+        system("cls");
         cout<<"|==========================================================================|"<<endl;
         cout<<"|                      Perumahan Griya Indah Yogya                         |"<<endl;
         cout<<"|==========================================================================|"<<endl;
@@ -476,6 +519,6 @@ int main(){
         goto dp;
     }
     delay(10);
-    system("clear");
+    system("cls");
     goto awal;
 }
