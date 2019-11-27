@@ -22,16 +22,44 @@ void delay(int delay)
  while(now<=later)now=time(NULL);
 }
 int main(){
+	login:
+	cout<<"#######################################################################################################################\n\n";
+	cout<<"                                                  Silahkan Login !\n\n";
+	cout<<"#######################################################################################################################\n";
+	
+	cout<<"Masukkan Nama =";
+	string id;
+	cin>>id;
+	if(id=="Rafli"||id=="rafli"){
+		cout<<"Masukkan Password !";
+		int pass;
+		cin>>pass;
+		if(pass==123){
+		goto awalan;	
+		}
+		else {
+			cin.clear();
+        	cin.ignore();
+			goto login;
+		}
+	}
+	else{
+		system("cls");
+		cout<<"ID Tidak Ditemukan Atau Password Salah !\n";
+		goto login;
+	}
+	awalan:
     system("cls");
     int no_blok;
     char pembeli[50];
     char alamat[200];
     string blok,no;
     awal:
-    cout<<"|=================================|"<<endl;
-    cout<<"|   Perumahan Griya Indah Yogya   |"<<endl;
-    cout<<"|      No Telp: 08381094983       |"<<endl;
-    cout<<"|=================================|"<<endl;
+    cout<<"|=====================================================================================================================|"<<endl;
+    cout<<"|                                             PERUMAHAN GRIYA INDAH YOGYA                                             |"<<endl;
+    cout<<"|                                         JL Palagan KM 20, Sleman, Yogyakarta                                        |"<<endl;
+    cout<<"|                                                No Telp: 08381094983                                                 |"<<endl;
+    cout<<"|=====================================================================================================================|"<<endl;
     cout<<"Nama Pembeli = ";
     cin.clear();
     cin.ignore();
@@ -63,14 +91,15 @@ int main(){
         goto no;
     }
         satu:
-    cout<<endl<<"|==================================|"<<endl;
-    cout<<"|         PILIHAN BLOK RUMAH       |"<<endl;
-    cout<<"|==================================|"<<endl;
-    cout<<"|1.Sebelah Utara taman    (BLOK A) |"<<endl;
-    cout<<"|2.Sebelah Selatan taman  (BLOK B) |"<<endl;
-    cout<<"|3.Sebelah Barat taman    (BLOK C) |"<<endl;
-    cout<<"|4.Sebelah Timur taman    (BLOK D) |"<<endl;
-    cout<<"|==================================|"<<endl;
+    cout<<endl;
+    cout<<"|=====================================================================================================================|"<<endl;
+    cout<<"|                                                 PILIHAN BLOK RUMAH                                                  |"<<endl;
+    cout<<"|=====================================================================================================================|"<<endl;
+    cout<<"|1.| Sebelah Utara taman    (BLOK A)                                                                                  |"<<endl;
+    cout<<"|2.| Sebelah Selatan taman  (BLOK B)                                                                                  |"<<endl;
+    cout<<"|3.| Sebelah Barat taman    (BLOK C)                                                                                  |"<<endl;
+    cout<<"|4.| Sebelah Timur taman    (BLOK D)                                                                                  |"<<endl;
+    cout<<"|=====================================================================================================================|"<<endl;
     cout<<"Pilih Nomor Blok Rumah = ";
     cin>>no_blok;
     if(no_blok==1){
@@ -98,13 +127,13 @@ int main(){
         cin >> no_blok;
     }
         dua:
-    cout<<"|=========================================================|"<<endl;
-    cout<<"|                     PILIHAN LUAS TANAH                  |"<<endl;
-    cout<<"|=========================================================|"<<endl;
-    cout<<"|1.luas bangunan=7x10m, Luas Tanah=8x11m  = Rp.125.000.000|"<<endl;
-    cout<<"|2.Luas Bangunan=8x11m, Luas Tanah=9x15m  = Rp.175.000.000|"<<endl;
-    cout<<"|3.Luas Bangunan=9x12m, Luas Tanah=10x19m = Rp.250.000.000|"<<endl;
-    cout<<"|=========================================================|"<<endl;
+    cout<<"|=====================================================================================================================|"<<endl;
+    cout<<"|                                                PILIHAN LUAS TANAH                                                   |"<<endl;
+    cout<<"|=====================================================================================================================|"<<endl;
+    cout<<"|1.| luas bangunan=7x10m      +      Luas Tanah=8x11m                     =        Rp.125.000.000 + Pajak (Rp.50.000) |"<<endl;
+    cout<<"|2.| Luas Bangunan=8x11m      +      Luas Tanah=9x15m                     =        Rp.175.000.000 + Pajak (Rp.75.000) |"<<endl;
+    cout<<"|3.| Luas Bangunan=9x12m      +      Luas Tanah=10x19m                    =        Rp.250.000.000 + Pajak (Rp.100.000)|"<<endl;
+    cout<<"|=====================================================================================================================|"<<endl;
     cout<<"pilih Nomor Sesuai Yang anda Inginkan = ";
     int tipe,hargatnh;
     string luas;
@@ -133,12 +162,13 @@ int main(){
         cin >> tipe;
     }
     tiga:
-    cout<<endl<<"|=====================================|"<<endl;
-    cout<<"|            Model Bangunan           |"<<endl;
-    cout<<"|=====================================|"<<endl;
-    cout<<"|1.Bertingkat     = Rp.100jt          |"<<endl;
-    cout<<"|2.Hanya 1 lantai = Rp.70jt           |"<<endl;
-    cout<<"|=====================================|"<<endl;
+    cout<<endl;
+    cout<<"|=====================================================================================================================|"<<endl;
+    cout<<"|                                                 Model Bangunan                                                      |"<<endl;
+    cout<<"|=====================================================================================================================|"<<endl;
+    cout<<"|1.| Bertingkat                                                                                           = Rp.100jt  |"<<endl;
+    cout<<"|2.| Hanya 1 lantai                                                                                       = Rp.70jt   |"<<endl;
+    cout<<"|=====================================================================================================================|"<<endl;
     cout<<"Silahkan Pilih Nomor Model Bangunan = ";
     int hargamodel;
     string model;
@@ -162,13 +192,13 @@ int main(){
         cin >> hargamodel;
     }
         empat:
-    cout<<"|=================================|"<<endl;
-    cout<<"|       MODEL KERAMIK LANTAI      |"<<endl;
-    cout<<"|=================================|"<<endl;
-    cout<<"|1.Keramik Biasa =    Rp.10jt     |"<<endl;
-    cout<<"|2.Keramik Terazzo =  Rp.13jt     |"<<endl;
-    cout<<"|3.Keramik Granit =   Rp.15jt     |"<<endl;
-    cout<<"|=================================|"<<endl;
+    cout<<"|=====================================================================================================================|"<<endl;
+    cout<<"|                                               MODEL KERAMIK LANTAI                                                  |"<<endl;
+    cout<<"|=====================================================================================================================|"<<endl;
+    cout<<"|1.| Keramik Biasa                                                                                        =  Rp.10jt  |"<<endl;
+    cout<<"|2.| Keramik Terazzo                                                                                      =  Rp.13jt  |"<<endl;
+    cout<<"|3.| Keramik Granit                                                                                       =  Rp.15jt  |"<<endl;
+    cout<<"|=====================================================================================================================|"<<endl;
     cout<<"Silahkan Pilih Nomor Keramik = ";
     int keramik;
     string tipekeramik;
@@ -197,14 +227,14 @@ int main(){
         cin >> keramik;
     }
         lima:
-    cout<<"|=================================|"<<endl;
-    cout<<"|     Jumlah Kamar Dalam Rumah    |"<<endl;
-    cout<<"|=================================|"<<endl;
-    cout<<"|1.Satu kamar  = Rp.30jt          |"<<endl;
-    cout<<"|2.dua kamar   = Rp.50jt          |"<<endl;
-    cout<<"|3.tiga kamar  = Rp.65jt          |"<<endl;
-    cout<<"|4.empat kamar = Rp.73jt          |"<<endl;
-    cout<<"|=================================|"<<endl;
+    cout<<"|=====================================================================================================================|"<<endl;
+    cout<<"|                                                Jumlah Kamar Dalam Rumah                                             |"<<endl;
+    cout<<"|=====================================================================================================================|"<<endl;
+    cout<<"|1.| 1 kamar                                                                                               = Rp.30jt  |"<<endl;
+    cout<<"|2.| 2 kamar                                                                                               = Rp.50jt  |"<<endl;
+    cout<<"|3.| 3 kamar                                                                                               = Rp.65jt  |"<<endl;
+    cout<<"|4.| 4 kamar                                                                                               = Rp.73jt  |"<<endl;
+    cout<<"|=====================================================================================================================|"<<endl;
     cout<<"Silahkan Pilih Nomor Kamar = ";
     int kamar;
     string tipekamar;
@@ -238,14 +268,14 @@ int main(){
         cin >> kamar;
     }
         enam:
-    cout<<"|=======================================================|"<<endl;
-    cout<<"|                    FASILITAS RUMAH                    |"<<endl;
-    cout<<"|=======================================================|"<<endl;
-    cout<<"|1.AC,TV,Sofa                                = Rp.25jt  |"<<endl;
-    cout<<"|2.AC,TV,Sofa,Springbed                      = Rp.31jt  |"<<endl;
-    cout<<"|3.AC,TV,Sofa,Springbed,Kulkas               = Rp.37jt  |"<<endl;
-    cout<<"|4.AC,TV,Sofa,Springbed,Kulkas,Bufet Display = Rp.44jt  |"<<endl;
-    cout<<"|=======================================================|"<<endl;
+    cout<<"|=====================================================================================================================|"<<endl;
+    cout<<"|                                                     FASILITAS RUMAH                                                 |"<<endl;
+    cout<<"|=====================================================================================================================|"<<endl;
+    cout<<"|1.| AC,TV,Sofa                                                                                            = Rp.25jt  |"<<endl;
+    cout<<"|2.| AC,TV,Sofa,Springbed                                                                                  = Rp.31jt  |"<<endl;
+    cout<<"|3.| AC,TV,Sofa,Springbed,Kulkas                                                                           = Rp.37jt  |"<<endl;
+    cout<<"|4.| AC,TV,Sofa,Springbed,Kulkas,Bufet Display                                                             = Rp.44jt  |"<<endl;
+    cout<<"|=====================================================================================================================|"<<endl;
     cout<<"Silahkan Pilih No fasilitas Rumah = ";
     int fasi;
     string fasili;
@@ -292,9 +322,9 @@ int main(){
     	cin>>konfir;
     	if(konfir=="y" || konfir=="Y"){
     	system("cls");
-        cout<<"|==========================================================================|"<<endl;
-        cout<<"|                      Perumahan Griya Indah Yogya                         |"<<endl;
-        cout<<"|==========================================================================|"<<endl;
+        cout<<"|===================================================================================================================|"<<endl;
+        cout<<"|                                            Perumahan Griya Indah Yogya                                            |"<<endl;
+        cout<<"|===================================================================================================================|"<<endl;
         cout<<"Nama Pembeli       = "<<pembeli<<endl;
         cout<<"Alamat Pembeli     = "<<alamat<<endl;
         cout<<"No Telp Pembeli    = "<<no<<endl;
@@ -304,17 +334,20 @@ int main(){
         cout<<"Tipe Keramik       = "<<tipekeramik<<", Harga = Rp."<<keramik/1000000<<"jt"<<endl;
         cout<<"Tipe Kamar         = "<<tipekamar<<", Harga = Rp."<<kamar/1000000<<"jt"<<endl;
         cout<<"Fasilitas          = "<<fasili<<", Harga = Rp."<<fasi/1000000<<"jt"<<endl;
-        cout<<"|=========================================================================|"<<endl;
-        cout<<"|                              Total Biaya                                |"<<endl;
-        cout<<"|=========================================================================|"<<endl;
+        cout<<"|===================================================================================================================|"<<endl;
+        cout<<"|                                                  Total Biaya                                                      |"<<endl;
+        cout<<"|===================================================================================================================|"<<endl;
         cout<<"Harga Cash         = "<<total/1000000<<"jt"<<endl;
         cout<<endl<<endl<<"Konfirmasi y/n ? =";
         string y;
         cin>>y;
         if (y=="y" || y=="Y"){
-            cout<<"##########################################################################"<<endl;
-            cout<<"     Terimakasih Telah Membeli Rumah Di Perumahan Griya Indah Yogya !     "<<endl;
-            cout<<"##########################################################################"<<endl;
+            cout<<"################################################################################################################"<<endl;
+            cout<<"                      Terimakasih Telah Membeli Rumah Di Perumahan Griya Indah Yogya !                          "<<endl;
+            cout<<"################################################################################################################"<<endl;
+            delay(5);
+    		system("cls");
+    		goto awal;
         }
         else if (y=="n" || y=="N"){
             cin.clear();
@@ -364,21 +397,21 @@ int main(){
     angsuran=(total-(dp*1000000));
     cout<<"Harga Sekarang Rp."<<(angsuran/1000000)<<"jt"<<endl;
         tujuh:
-    cout<<"|===================================|"<<endl;
-    cout<<"|        Biaya Angsuran Per Bulan   |"<<endl;
-    cout<<"|===================================|"<<endl;
-    cout<<"|1.Angsuran 6 Bulan, Bunga = 1%     |"<<endl;
-    cout<<"|2.Angsuran 12 Bulan, Bunga = 2%    |"<<endl;
-    cout<<"|3.Angsuran 24 Bulan, Bunga = 3%    |"<<endl;
-    cout<<"|4.Angsuran 36 Bulan, Bunga = 4%    |"<<endl;
-    cout<<"|5.Angsuran 48 Bulan, Bunga = 5%    |"<<endl;
-    cout<<"|6.Angsuran 60 Bulan, Bunga = 6%    |"<<endl;
-    cout<<"|7.Angsuran 72 Bulan, Bunga = 7%    |"<<endl;
-    cout<<"|8.Angsuran 84 Bulan, Bunga = 8%    |"<<endl;
-    cout<<"|9.Angsuran 96 Bulan, Bunga = 9%    |"<<endl;
-    cout<<"|10.Angsuran 108 Bulan, Bunga = 10% |"<<endl;
-    cout<<"|11.Angsuran 120 Bulan, Bunga = 11% |"<<endl;
-    cout<<"|===================================|"<<endl;
+    cout<<"|====================================================================================================================|"<<endl;
+    cout<<"|                                                Biaya Angsuran Per Bulan                                            |"<<endl;
+    cout<<"|====================================================================================================================|"<<endl;
+    cout<<"|1. | Angsuran 6   Bulan  +  Bunga = 1%                                                                              |"<<endl;
+    cout<<"|2. | Angsuran 12  Bulan  +  Bunga = 2%                                                                              |"<<endl;
+    cout<<"|3. | Angsuran 24  Bulan  +  Bunga = 3%                                                                              |"<<endl;
+    cout<<"|4. | Angsuran 36  Bulan  +  Bunga = 4%                                                                              |"<<endl;
+    cout<<"|5. | Angsuran 48  Bulan  +  Bunga = 5%                                                                              |"<<endl;
+    cout<<"|6. | Angsuran 60  Bulan  +  Bunga = 6%                                                                              |"<<endl;
+    cout<<"|7. | Angsuran 72  Bulan  +  Bunga = 7%                                                                              |"<<endl;
+    cout<<"|8. | Angsuran 84  Bulan  +  Bunga = 8%                                                                              |"<<endl;
+    cout<<"|9. | Angsuran 96  Bulan  +  Bunga = 9%                                                                              |"<<endl;
+    cout<<"|10.| Angsuran 108 Bulan  +  Bunga = 10%                                                                             |"<<endl;
+    cout<<"|11.| Angsuran 120 Bulan  +  Bunga = 11%                                                                             |"<<endl;
+    cout<<"|====================================================================================================================|"<<endl;
     cout<<"Masukkan Pilihan Angsuran Anda = ";
     int cicilan,pildp;
     float bayar,bunga,bungas,harga;
@@ -466,9 +499,9 @@ int main(){
     cin>>x;
     if (x=="y" || x=="Y"){
         system("cls");
-        cout<<"|==========================================================================|"<<endl;
-        cout<<"|                      Perumahan Griya Indah Yogya                         |"<<endl;
-        cout<<"|==========================================================================|"<<endl;
+        cout<<"|================================================================================================================|"<<endl;
+        cout<<"|                                            Perumahan Griya Indah Yogya                                         |"<<endl;
+        cout<<"|================================================================================================================|"<<endl;
         cout<<"Nama Pembeli       = "<<pembeli<<endl;
         cout<<"Alamat Pembeli     = "<<alamat<<endl;
         cout<<"No Telp Pembeli    = "<<no<<endl;
@@ -478,9 +511,9 @@ int main(){
         cout<<"Tipe Keramik       = "<<tipekeramik<<", Harga = Rp."<<keramik/1000000<<"jt"<<endl;
         cout<<"Tipe Kamar         = "<<tipekamar<<", Harga = Rp."<<kamar/1000000<<"jt"<<endl;
         cout<<"Fasilitas          = "<<fasili<<", Harga = Rp."<<fasi/1000000<<"jt"<<endl;
-        cout<<"|=========================================================================|"<<endl;
-        cout<<"|                              Total Biaya                                |"<<endl;
-        cout<<"|=========================================================================|"<<endl;
+        cout<<"|================================================================================================================|"<<endl;
+        cout<<"|                                                    Total Biaya                                                 |"<<endl;
+        cout<<"|================================================================================================================|"<<endl;
         cout<<"Harga Cash         = "<<total/1000000<<"jt"<<endl;
         cout<<"Pokok Kredit       = "<<total/1000000-dp<<" Jt"<<endl;
         cout<<"DP                 = "<<dp<<"jt"<<endl;
@@ -491,9 +524,9 @@ int main(){
         string y;
         cin>>y;
         if (y=="y" || y=="Y"){
-            cout<<"##########################################################################"<<endl;
-            cout<<"     Terimakasih Telah Membeli Rumah Di Perumahan Griya Indah Yogya !     "<<endl;
-            cout<<"##########################################################################"<<endl;
+            cout<<"#############################################################################################################"<<endl;
+            cout<<"                       Terimakasih Telah Membeli Rumah Di Perumahan Griya Indah Yogya !     "<<endl;
+            cout<<"#############################################################################################################"<<endl;
         }
         else if (y=="n" || y=="N"){
             cin.clear();
@@ -518,7 +551,7 @@ int main(){
         cin.ignore();
         goto dp;
     }
-    delay(10);
+    delay(5);
     system("cls");
     goto awal;
 }
