@@ -1,6 +1,6 @@
 #include <iostream>
 #include <regex>
-
+#include <fstream>
 using namespace std;
 bool Cek_Nomor(const string& s)
 {
@@ -31,7 +31,7 @@ int main(){
 	string id;
 	cin>>id;
 	if(id=="Rafli"||id=="rafli"){
-		cout<<"Masukkan Password !";
+		cout<<"Masukkan Password =";
 		int pass;
 		cin>>pass;
 		if(pass==123){
@@ -311,9 +311,12 @@ int main(){
     dp:
     int total=(hargatnh+hargamodel+keramik+kamar+fasi);
     cout<<"Harga Total = Rp."<<(total/1000000)<<"jt"<<endl;
-    cout<<"Pilih Metode Pembayaran !\n";
-    cout<<"1.Cash\n";
-    cout<<"2.Angsuran\n";
+    cout<<"#############################\n";
+    cout<<"## Pilih Metode Pembayaran ##\n";
+    cout<<"#############################\n";
+    cout<<"## 1.|Cash                 ##\n";
+    cout<<"## 2.|Angsuran             ##\n";
+    cout<<"#############################\n";
     int meto;
     cin>>meto;
     if(meto==1){
@@ -322,9 +325,9 @@ int main(){
     	cin>>konfir;
     	if(konfir=="y" || konfir=="Y"){
     	system("cls");
-        cout<<"|===================================================================================================================|"<<endl;
-        cout<<"|                                            Perumahan Griya Indah Yogya                                            |"<<endl;
-        cout<<"|===================================================================================================================|"<<endl;
+        cout<<"|=====================================================================================================================|"<<endl;
+        cout<<"|                                             Perumahan Griya Indah Yogya                                             |"<<endl;
+        cout<<"|=====================================================================================================================|"<<endl;
         cout<<"Nama Pembeli       = "<<pembeli<<endl;
         cout<<"Alamat Pembeli     = "<<alamat<<endl;
         cout<<"No Telp Pembeli    = "<<no<<endl;
@@ -334,17 +337,72 @@ int main(){
         cout<<"Tipe Keramik       = "<<tipekeramik<<", Harga = Rp."<<keramik/1000000<<"jt"<<endl;
         cout<<"Tipe Kamar         = "<<tipekamar<<", Harga = Rp."<<kamar/1000000<<"jt"<<endl;
         cout<<"Fasilitas          = "<<fasili<<", Harga = Rp."<<fasi/1000000<<"jt"<<endl;
-        cout<<"|===================================================================================================================|"<<endl;
-        cout<<"|                                                  Total Biaya                                                      |"<<endl;
-        cout<<"|===================================================================================================================|"<<endl;
+        cout<<"|=====================================================================================================================|"<<endl;
+        cout<<"|                                                   Total Biaya                                                       |"<<endl;
+        cout<<"|=====================================================================================================================|"<<endl;
         cout<<"Harga Cash         = "<<total/1000000<<"jt"<<endl;
+        cout<<"Total Biaya        = "<<total/1000000<<"jt"<<endl;
+        dwidd:
+        cout<<"Masukkan Jumlah Pembayaran (jt) =\n";
+        int dwid;
+        cin.clear();
+        cin.ignore();
+        cin>>dwid;
+        if(cin.fail()){
+        	cout<<"Data Yang Anda Masukkan Salah !\n";
+        	cin.clear();
+        	cin.ignore();
+        	goto dwidd; 
+		}
+		else {
+			if(dwid>=total/1000000){
+			cout<<"Total Pembayaran   = "<<dwid<<" jt\n";
+			cout<<"Total Kembalian   = "<<dwid-(total/1000000)<<" jt\n";
+			goto konfir;
+			
+			}
+			else{
+			cout<<"Uang Anda Kurang !\n";
+				goto dwidd;
+				cin.clear();
+				cin.ignore();
+				cin>>dwid;
+			}
+		}
+		konfir:
         cout<<endl<<endl<<"Konfirmasi y/n ? =";
         string y;
         cin>>y;
         if (y=="y" || y=="Y"){
-            cout<<"################################################################################################################"<<endl;
-            cout<<"                      Terimakasih Telah Membeli Rumah Di Perumahan Griya Indah Yogya !                          "<<endl;
-            cout<<"################################################################################################################"<<endl;
+        	ofstream file;
+    		file.open ("struk.txt");
+    		file<<"|=====================================================================================================================|"<<endl;
+        	file<<"|                                             Perumahan Griya Indah Yogya                                             |"<<endl;
+        	file<<"|=====================================================================================================================|"<<endl;
+        	file<<"Nama Pembeli       = "<<pembeli<<endl;
+        	file<<"Alamat Pembeli     = "<<alamat<<endl;
+        	file<<"No Telp Pembeli    = "<<no<<endl;
+        	file<<"Blok Rumah         = "<<blok<<endl;
+        	file<<"Luas Tanah         = "<<luas<<", Harga = Rp."<<hargatnh/1000000<<"jt"<<endl;
+        	file<<"Model Bangunan     = "<<model<<", Harga = Rp."<<hargamodel/1000000<<"jt"<<endl;
+        	file<<"Tipe Keramik       = "<<tipekeramik<<", Harga = Rp."<<keramik/1000000<<"jt"<<endl;
+        	file<<"Tipe Kamar         = "<<tipekamar<<", Harga = Rp."<<kamar/1000000<<"jt"<<endl;
+        	file<<"Fasilitas          = "<<fasili<<", Harga = Rp."<<fasi/1000000<<"jt"<<endl;
+        	file<<"|=====================================================================================================================|"<<endl;
+        	file<<"|                                                   Total Biaya                                                       |"<<endl;
+        	file<<"|=====================================================================================================================|"<<endl;
+        	file<<"Harga Cash         = "<<total/1000000<<"jt"<<endl;
+        	file<<"Total Biaya        = "<<total/1000000<<"jt"<<endl;
+        	file<<"Total Pembayaran   = "<<dwid<<" jt\n";
+			file<<"Total Kembalian    = "<<dwid-(total/1000000)<<" jt\n";
+  			file.close();
+
+            cout<<"\n\n\n#####################################################################################################################"<<endl;
+            cout<<"                           Terimakasih Telah Membeli Rumah Di Perumahan Griya Indah Yogya !                          "<<endl;
+            cout<<"#####################################################################################################################"<<endl;
+            cout<<"Mencetak Struk, Mohon Tunggu...\n";
+            delay(5);
+            cout<<"Berhasil Dicetak !\n Mengalihkan Ke Awal...";
             delay(5);
     		system("cls");
     		goto awal;
@@ -499,9 +557,9 @@ int main(){
     cin>>x;
     if (x=="y" || x=="Y"){
         system("cls");
-        cout<<"|================================================================================================================|"<<endl;
-        cout<<"|                                            Perumahan Griya Indah Yogya                                         |"<<endl;
-        cout<<"|================================================================================================================|"<<endl;
+        cout<<"|===================================================================================================================|"<<endl;
+        cout<<"|                                             Perumahan Griya Indah Yogya                                           |"<<endl;
+        cout<<"|===================================================================================================================|"<<endl;
         cout<<"Nama Pembeli       = "<<pembeli<<endl;
         cout<<"Alamat Pembeli     = "<<alamat<<endl;
         cout<<"No Telp Pembeli    = "<<no<<endl;
@@ -511,9 +569,9 @@ int main(){
         cout<<"Tipe Keramik       = "<<tipekeramik<<", Harga = Rp."<<keramik/1000000<<"jt"<<endl;
         cout<<"Tipe Kamar         = "<<tipekamar<<", Harga = Rp."<<kamar/1000000<<"jt"<<endl;
         cout<<"Fasilitas          = "<<fasili<<", Harga = Rp."<<fasi/1000000<<"jt"<<endl;
-        cout<<"|================================================================================================================|"<<endl;
-        cout<<"|                                                    Total Biaya                                                 |"<<endl;
-        cout<<"|================================================================================================================|"<<endl;
+        cout<<"|===================================================================================================================|"<<endl;
+        cout<<"|                                                     Total Biaya                                                   |"<<endl;
+        cout<<"|===================================================================================================================|"<<endl;
         cout<<"Harga Cash         = "<<total/1000000<<"jt"<<endl;
         cout<<"Pokok Kredit       = "<<total/1000000-dp<<" Jt"<<endl;
         cout<<"DP                 = "<<dp<<"jt"<<endl;
@@ -524,9 +582,39 @@ int main(){
         string y;
         cin>>y;
         if (y=="y" || y=="Y"){
-            cout<<"#############################################################################################################"<<endl;
-            cout<<"                       Terimakasih Telah Membeli Rumah Di Perumahan Griya Indah Yogya !     "<<endl;
-            cout<<"#############################################################################################################"<<endl;
+        	ofstream file;
+    		file.open ("struk.txt");
+    		file<<"|=====================================================================================================================|"<<endl;
+        	file<<"|                                             Perumahan Griya Indah Yogya                                             |"<<endl;
+        	file<<"|=====================================================================================================================|"<<endl;
+        	file<<"Nama Pembeli       = "<<pembeli<<endl;
+        	file<<"Alamat Pembeli     = "<<alamat<<endl;
+        	file<<"No Telp Pembeli    = "<<no<<endl;
+        	file<<"Blok Rumah         = "<<blok<<endl;
+        	file<<"Luas Tanah         = "<<luas<<", Harga = Rp."<<hargatnh/1000000<<"jt"<<endl;
+        	file<<"Model Bangunan     = "<<model<<", Harga = Rp."<<hargamodel/1000000<<"jt"<<endl;
+        	file<<"Tipe Keramik       = "<<tipekeramik<<", Harga = Rp."<<keramik/1000000<<"jt"<<endl;
+        	file<<"Tipe Kamar         = "<<tipekamar<<", Harga = Rp."<<kamar/1000000<<"jt"<<endl;
+        	file<<"Fasilitas          = "<<fasili<<", Harga = Rp."<<fasi/1000000<<"jt"<<endl;
+        	file<<"|=====================================================================================================================|"<<endl;
+        	file<<"|                                                   Total Biaya                                                       |"<<endl;
+        	file<<"|=====================================================================================================================|"<<endl;
+        	file<<"Harga Cash         = "<<total/1000000<<"jt"<<endl;
+        	file<<"Pokok Kredit       = "<<total/1000000-dp<<" Jt"<<endl;
+        	file<<"DP                 = "<<dp<<"jt"<<endl;
+        	file<<"Tenor              = "<<cicilan<<" Bulan"<<endl;
+        	file<<"Bunga              = "<<bunga/1000<<"rb"<<endl;
+        	file<<"Angsuran           = "<<harga/1000000<<"jt/bulan"<<endl;
+        	file.close();
+            cout<<"\n\n\n#####################################################################################################################"<<endl;
+            cout<<"                           Terimakasih Telah Membeli Rumah Di Perumahan Griya Indah Yogya !                          "<<endl;
+            cout<<"#####################################################################################################################"<<endl;
+            cout<<"Mencetak Struk, Mohon Tunggu...\n";
+            delay(5);
+            cout<<"Berhasil Dicetak !\n Mengalihkan Ke Awal...";
+            delay(5);
+    		system("cls");
+    		goto awal;
         }
         else if (y=="n" || y=="N"){
             cin.clear();
@@ -551,7 +639,6 @@ int main(){
         cin.ignore();
         goto dp;
     }
-    delay(5);
     system("cls");
     goto awal;
 }
