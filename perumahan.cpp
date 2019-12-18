@@ -1,6 +1,7 @@
 #include <iostream>
 #include <regex>
 #include <fstream>
+#include <windows.h>
 using namespace std;
 bool Cek_Nomor(const string& s)
 {
@@ -15,6 +16,10 @@ int bungaa(int cicilan,float angsurann, float bunga){
     return angsurann*bunga/cicilan;
 }
 
+void pilihwarna(int nilai){
+SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),  nilai);
+	}
+	
 void delay(int delay)
 {
  int now=time(NULL);
@@ -25,11 +30,13 @@ int main(){
 	//##############################################################################################################################
 	//##############################################################################################################################
 	//##############################################################################################################################
+	system("color 87");
+	pilihwarna(112);
 	login:
-	cout<<"#######################################################################################################################\n\n";
-	cout<<"                                                  Silahkan Login !\n\n";
 	cout<<"#######################################################################################################################\n";
-	
+	cout<<"                                                  Silahkan Login !\n";
+	cout<<"#######################################################################################################################\n";
+	pilihwarna(135);
 	cout<<"Masukkan Nama =";
 	string id;
 	cin>>id;
@@ -48,7 +55,9 @@ int main(){
 	}
 	else{
 		system("cls");
+		pilihwarna(132);
 		cout<<"ID Tidak Ditemukan Atau Password Salah !\n";
+		pilihwarna(135);
 		goto login;
 	}
 	awalan:
@@ -61,11 +70,13 @@ int main(){
     //##############################################################################################################################
     //##############################################################################################################################
     awal:
+    		pilihwarna(112);
     cout<<"|=====================================================================================================================|"<<endl;
     cout<<"|                                             PERUMAHAN GRIYA INDAH YOGYA                                             |"<<endl;
     cout<<"|                                         JL Palagan KM 20, Sleman, Yogyakarta                                        |"<<endl;
     cout<<"|                                                No Telp: 08381094983                                                 |"<<endl;
     cout<<"|=====================================================================================================================|"<<endl;
+    	pilihwarna(135);
     cout<<"Nama Pembeli = ";
     cin.clear();
     cin.ignore();
@@ -75,7 +86,9 @@ int main(){
         goto alamat;
     else {
         system("cls");
+        pilihwarna(132);
         cout<<"Nama Hanya Bisa Diisi Oleh Huruf, Tidak Boleh Angka !\n";
+        pilihwarna(135);
         goto awal;
     }
     alamat:
@@ -88,14 +101,18 @@ int main(){
     if(Cek_Nomor(no)){
         while(panjang <= 6 || panjang >= 13){
         	system("cls");
+        	pilihwarna(132);
             cout<<"Nomor Yang Anda Masukkan Salah !\n";
+            pilihwarna(135);
             goto no;
         }
         goto satu;
     }
     else{
         system("cls");
+        pilihwarna(132);
         cout<<"Nomor Hanya Bisa diisi Oleh Angka !\n";
+        pilihwarna(135);
         goto no;
     }
     //##############################################################################################################################
@@ -105,6 +122,7 @@ int main(){
     cout<<endl;
     system("cls");
     satu:
+    		pilihwarna(112);
     cout<<"|=====================================================================================================================|"<<endl;
     cout<<"|                                                 PILIHAN BLOK RUMAH                                                  |"<<endl;
     cout<<"|=====================================================================================================================|"<<endl;
@@ -113,6 +131,7 @@ int main(){
     cout<<"|3.| Sebelah Barat taman    (BLOK C)                                                                                  |"<<endl;
     cout<<"|4.| Sebelah Timur taman    (BLOK D)                                                                                  |"<<endl;
     cout<<"|=====================================================================================================================|"<<endl;
+    	pilihwarna(135);
     cout<<"Pilih Nomor Blok Rumah = ";
     cin>>no_blok;
     if(no_blok==1){
@@ -139,11 +158,14 @@ int main(){
         system("cls");         
         cin.clear();
         cin.ignore();
+        pilihwarna(132);
         cout<<"Tolong Isi Dengan Benar !"<<endl;
+        pilihwarna(135);
         goto satu;
         cin >> no_blok;
     }
         dua:
+        	pilihwarna(112);
     cout<<"|=====================================================================================================================|"<<endl;
     cout<<"|                                                PILIHAN LUAS TANAH                                                   |"<<endl;
     cout<<"|=====================================================================================================================|"<<endl;
@@ -151,6 +173,7 @@ int main(){
     cout<<"|2.| Luas Bangunan=8x11m      +      Luas Tanah=9x15m                     =        Rp.175.000.000 + Pajak (Rp.75.000) |"<<endl;
     cout<<"|3.| Luas Bangunan=9x12m      +      Luas Tanah=10x19m                    =        Rp.250.000.000 + Pajak (Rp.100.000)|"<<endl;
     cout<<"|=====================================================================================================================|"<<endl;
+    pilihwarna(135);
     cout<<"pilih Nomor Sesuai Yang anda Inginkan = ";
     int tipe,hargatnh;
     string luas;
@@ -177,18 +200,22 @@ int main(){
         system("cls");         
         cin.clear();
         cin.ignore();
+        pilihwarna(132);
         cout<<"Tolong Isi Dengan Benar !"<<endl;
-        goto dua;
+        pilihwarna(135);
+		goto dua;
         cin >> tipe;
     }
     tiga:
     cout<<endl;
+    pilihwarna(112);
     cout<<"|=====================================================================================================================|"<<endl;
     cout<<"|                                                 Model Bangunan                                                      |"<<endl;
     cout<<"|=====================================================================================================================|"<<endl;
     cout<<"|1.| Bertingkat                                                                                           = Rp.100jt  |"<<endl;
     cout<<"|2.| Hanya 1 lantai                                                                                       = Rp.70jt   |"<<endl;
     cout<<"|=====================================================================================================================|"<<endl;
+    pilihwarna(135);
     cout<<"Silahkan Pilih Nomor Model Bangunan = ";
     int hargamodel;
     string model;
@@ -209,11 +236,14 @@ int main(){
         system("cls");         
         cin.clear();
         cin.ignore();
+        pilihwarna(132);
         cout<<"Tolong Isi Dengan Benar !"<<endl;
-        goto tiga;
+        pilihwarna(135);
+		goto tiga;
         cin >> hargamodel;
     }
         empat:
+        	pilihwarna(112);
     cout<<"|=====================================================================================================================|"<<endl;
     cout<<"|                                               MODEL KERAMIK LANTAI                                                  |"<<endl;
     cout<<"|=====================================================================================================================|"<<endl;
@@ -221,6 +251,7 @@ int main(){
     cout<<"|2.| Keramik Terazzo                                                                                      =  Rp.13jt  |"<<endl;
     cout<<"|3.| Keramik Granit                                                                                       =  Rp.15jt  |"<<endl;
     cout<<"|=====================================================================================================================|"<<endl;
+    pilihwarna(135);
     cout<<"Silahkan Pilih Nomor Keramik = ";
     int keramik;
     string tipekeramik;
@@ -247,11 +278,14 @@ int main(){
         system("cls");         
         cin.clear();
         cin.ignore();
+        pilihwarna(132);
         cout<<"Tolong Isi Dengan Benar !"<<endl;
-        goto empat;
+        pilihwarna(135);
+		goto empat;
         cin >> keramik;
     }
         lima:
+        	pilihwarna(112);
     cout<<"|=====================================================================================================================|"<<endl;
     cout<<"|                                                Jumlah Kamar Dalam Rumah                                             |"<<endl;
     cout<<"|=====================================================================================================================|"<<endl;
@@ -260,6 +294,7 @@ int main(){
     cout<<"|3.| 3 kamar                                                                                               = Rp.65jt  |"<<endl;
     cout<<"|4.| 4 kamar                                                                                               = Rp.73jt  |"<<endl;
     cout<<"|=====================================================================================================================|"<<endl;
+    pilihwarna(135);
     cout<<"Silahkan Pilih Nomor Kamar = ";
     int kamar;
     string tipekamar;
@@ -292,11 +327,14 @@ int main(){
         system("cls");         
         cin.clear();
         cin.ignore();
+        pilihwarna(132);
         cout<<"Tolong Isi Dengan Benar !"<<endl;
-        goto lima;
+        pilihwarna(135);
+		goto lima;
         cin >> kamar;
     }
         enam:
+        	pilihwarna(112);
     cout<<"|=====================================================================================================================|"<<endl;
     cout<<"|                                                     FASILITAS RUMAH                                                 |"<<endl;
     cout<<"|=====================================================================================================================|"<<endl;
@@ -305,6 +343,7 @@ int main(){
     cout<<"|3.| AC,TV,Sofa,Springbed,Kulkas                                                                           = Rp.37jt  |"<<endl;
     cout<<"|4.| AC,TV,Sofa,Springbed,Kulkas,Bufet Display                                                             = Rp.44jt  |"<<endl;
     cout<<"|=====================================================================================================================|"<<endl;
+    pilihwarna(135);
     cout<<"Silahkan Pilih No fasilitas Rumah = ";
     int fasi;
     string fasili;
@@ -337,7 +376,9 @@ int main(){
         system("cls");         
         cin.clear();
         cin.ignore();
+        pilihwarna(132);
         cout<<"Tolong Isi Dengan Benar !"<<endl;
+        pilihwarna(135);
         goto enam;
         cin >> fasi;
     }
@@ -347,12 +388,14 @@ int main(){
     dp:
     int total=(hargatnh+hargamodel+keramik+kamar+fasi);
     cout<<"Harga Total = Rp."<<(total/1000000)<<"jt"<<endl;
+    pilihwarna(112);
     cout<<"#############################\n";
     cout<<"## Pilih Metode Pembayaran ##\n";
     cout<<"#############################\n";
     cout<<"## 1.|Cash                 ##\n";
     cout<<"## 2.|Angsuran             ##\n";
     cout<<"#############################\n";
+    pilihwarna(135);
     int meto;
     cin>>meto;
     if(meto==1){
@@ -361,9 +404,11 @@ int main(){
     	cin>>konfir;
     	if(konfir=="y" || konfir=="Y"){
     	system("cls");
+    	pilihwarna(112);
         cout<<"|=====================================================================================================================|"<<endl;
         cout<<"|                                             Perumahan Griya Indah Yogya                                             |"<<endl;
         cout<<"|=====================================================================================================================|"<<endl;
+        pilihwarna(135);
         cout<<"Nama Pembeli       = "<<pembeli<<endl;
         cout<<"Alamat Pembeli     = "<<alamat<<endl;
         cout<<"No Telp Pembeli    = "<<no<<endl;
@@ -373,19 +418,24 @@ int main(){
         cout<<"Tipe Keramik       = "<<tipekeramik<<", Harga = Rp."<<keramik/1000000<<"jt"<<endl;
         cout<<"Tipe Kamar         = "<<tipekamar<<", Harga = Rp."<<kamar/1000000<<"jt"<<endl;
         cout<<"Fasilitas          = "<<fasili<<", Harga = Rp."<<fasi/1000000<<"jt"<<endl;
+        pilihwarna(112);
         cout<<"|=====================================================================================================================|"<<endl;
         cout<<"|                                                   Total Biaya                                                       |"<<endl;
         cout<<"|=====================================================================================================================|"<<endl;
+        pilihwarna(135);
         cout<<"Harga Cash         = "<<total/1000000<<"jt"<<endl;
         cout<<"Total Biaya        = "<<total/1000000<<"jt"<<endl;
         dwidd:
+        	pilihwarna(135);
         cout<<"Masukkan Jumlah Pembayaran (jt) =\n";
         int dwid;
         cin.clear();
         cin.ignore();
         cin>>dwid;
         if(cin.fail()){
+        	pilihwarna(132);
         	cout<<"Data Yang Anda Masukkan Salah !\n";
+        	pilihwarna(135);
         	cin.clear();
         	cin.ignore();
         	goto dwidd; 
@@ -398,7 +448,9 @@ int main(){
 			
 			}
 			else{
+				pilihwarna(132);
 			cout<<"Uang Anda Kurang !\n";
+			pilihwarna(135);
 				goto dwidd;
 				cin.clear();
 				cin.ignore();
@@ -435,10 +487,11 @@ int main(){
 			file<<"                           Terimakasih Telah Membeli Rumah Di Perumahan Griya Indah Yogya !"<<endl;
 			file<<"#####################################################################################################################";
   			file.close();
-
+			pilihwarna(112);
             cout<<"\n\n\n#####################################################################################################################"<<endl;
             cout<<"                           Terimakasih Telah Membeli Rumah Di Perumahan Griya Indah Yogya !                          "<<endl;
             cout<<"#####################################################################################################################"<<endl;
+            pilihwarna(135);
             cout<<"Mencetak Struk, Mohon Tunggu...\n";
             delay(5);
             cout<<"Berhasil Dicetak !\n Mengalihkan Ke Awal...";
@@ -452,7 +505,9 @@ int main(){
             goto dp;
         }
         else {
+        	pilihwarna(132);
             cout<<"Isi Dengan Benar !";
+            pilihwarna(135);
             cin.clear();
             cin.ignore();
             goto dp;
@@ -469,7 +524,9 @@ int main(){
         system("cls");         
         cin.clear();
         cin.ignore();
+        pilihwarna(132);
         cout<<"Tolong Isi Dengan Benar !"<<endl;
+        pilihwarna(135);
         goto dp;
         cin >> meto;
     }
@@ -483,14 +540,18 @@ int main(){
     cin>>dp;
     if(dp>total/1000000){
     	system("cls");
-        cout<<" #####DP Harus Kurang Dari Harga Total !#### \n";
+    	pilihwarna(132);
+        cout<<" DP Harus Kurang Dari Harga Total ! \n";
+        pilihwarna(135);
         goto dp;
     }
     else if(cin.fail()){
         system("cls");         
         cin.clear();
         cin.ignore();
+        pilihwarna(132);
         cout<<"Tolong Isi Dengan Benar !"<<endl;
+        pilihwarna(135);
         goto angsur;
         cin >> dp;
     }
@@ -498,6 +559,7 @@ int main(){
     angsuran=(total-(dp*1000000));
     cout<<"Harga Sekarang Rp."<<(angsuran/1000000)<<"jt"<<endl;
         tujuh:
+        	pilihwarna(112);
     cout<<"|====================================================================================================================|"<<endl;
     cout<<"|                                                Biaya Angsuran Per Bulan                                            |"<<endl;
     cout<<"|====================================================================================================================|"<<endl;
@@ -513,6 +575,7 @@ int main(){
     cout<<"|10.| Angsuran 108 Bulan  +  Bunga = 10%                                                                             |"<<endl;
     cout<<"|11.| Angsuran 120 Bulan  +  Bunga = 11%                                                                             |"<<endl;
     cout<<"|====================================================================================================================|"<<endl;
+    pilihwarna(135);
     cout<<"Masukkan Pilihan Angsuran Anda = ";
     int cicilan,pildp;
     float bayar,bunga,bungas,harga;
@@ -587,7 +650,9 @@ int main(){
         system("cls");         
         cin.clear();
         cin.ignore();
+        pilihwarna(132);
         cout<<"Tolong Isi Dengan Benar !"<<endl;
+        pilihwarna(135);
         goto tujuh;
         cin >> pildp;
     }
@@ -600,9 +665,11 @@ int main(){
     cin>>x;
     if (x=="y" || x=="Y"){
         system("cls");
+        pilihwarna(112);
         cout<<"|===================================================================================================================|"<<endl;
         cout<<"|                                             Perumahan Griya Indah Yogya                                           |"<<endl;
         cout<<"|===================================================================================================================|"<<endl;
+        pilihwarna(135);
         cout<<"Nama Pembeli       = "<<pembeli<<endl;
         cout<<"Alamat Pembeli     = "<<alamat<<endl;
         cout<<"No Telp Pembeli    = "<<no<<endl;
@@ -612,15 +679,18 @@ int main(){
         cout<<"Tipe Keramik       = "<<tipekeramik<<", Harga = Rp."<<keramik/1000000<<"jt"<<endl;
         cout<<"Tipe Kamar         = "<<tipekamar<<", Harga = Rp."<<kamar/1000000<<"jt"<<endl;
         cout<<"Fasilitas          = "<<fasili<<", Harga = Rp."<<fasi/1000000<<"jt"<<endl;
+        pilihwarna(112);
         cout<<"|===================================================================================================================|"<<endl;
         cout<<"|                                                     Total Biaya                                                   |"<<endl;
         cout<<"|===================================================================================================================|"<<endl;
+        pilihwarna(135);
         cout<<"Harga Cash         = "<<total/1000000<<"jt"<<endl;
         cout<<"Pokok Kredit       = "<<total/1000000-dp<<" Jt"<<endl;
         cout<<"DP                 = "<<dp<<"jt"<<endl;
         cout<<"Tenor              = "<<cicilan<<" Bulan"<<endl;
         cout<<"Bunga              = "<<bunga/1000<<"rb"<<endl;
         cout<<"Angsuran           = "<<harga/1000000<<"jt/bulan"<<endl;
+        
         cout<<endl<<endl<<"Konfirmasi y/n ? =";
         string y;
         cin>>y;
@@ -655,9 +725,11 @@ int main(){
 			file<<"                           Terimakasih Telah Membeli Rumah Di Perumahan Griya Indah Yogya !"<<endl;
 			file<<"#####################################################################################################################";
         	file.close();
+        	pilihwarna(112);
             cout<<"\n\n\n#####################################################################################################################"<<endl;
             cout<<"                           Terimakasih Telah Membeli Rumah Di Perumahan Griya Indah Yogya !                          "<<endl;
             cout<<"#####################################################################################################################"<<endl;
+            pilihwarna(135);
             cout<<"Mencetak Struk, Mohon Tunggu...\n";
             delay(5);
             cout<<"Berhasil Dicetak !\n Mengalihkan Ke Awal...";
@@ -671,7 +743,9 @@ int main(){
             goto dp;
         }
         else {
+        	pilihwarna(132);
             cout<<"Isi Dengan Benar !";
+            pilihwarna(135);
             cin.clear();
             cin.ignore();
             goto dp;
@@ -683,7 +757,9 @@ int main(){
         goto dp;
     }
     else {
+    	pilihwarna(132);
         cout<<"isi Dengan Benar !";
+        pilihwarna(135);
         cin.clear();
         cin.ignore();
         goto dp;
