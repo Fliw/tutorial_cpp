@@ -2,6 +2,8 @@
 #include <regex>
 #include <fstream>
 #include <windows.h>
+#include <conio.h>
+#include <ctime>
 using namespace std;
 bool Cek_Nomor(const string& s)
 {
@@ -42,15 +44,29 @@ int main(){
 	cin>>id;
 	if(id=="rafli"||id=="Rafli"){
 		cout<<"Masukkan Password =";
-		int pass;
-		cin>>pass;
-		if(pass==123){
-		goto awalan;	
+		int totalbener=0;
+		char isi[11];
+		char pass[15]="password123";
+		for(int x = 0;x<11;x++){
+			isi[x]=getch();
+			cout<<"*";
+		}
+		for (int y=0;y<11;y++){
+			if(isi[y]==pass[y]){
+				totalbener = totalbener + 1;
+			}
+		}
+		
+		if(totalbener == 11){
+			goto awalan;
 		}
 		else {
-			cin.clear();
-        	cin.ignore();
-			goto login;
+			
+			system("cls");
+				pilihwarna(132);
+		cout<<"ID Tidak Ditemukan Atau Password Salah !\n";
+		pilihwarna(135);
+		goto login;
 		}
 	}
 	else{
@@ -463,7 +479,10 @@ int main(){
         cin>>y;
         if (y=="y" || y=="Y"){
         	ofstream file;
-    		file.open ("struk.txt");
+    		file.open ("Total Pembeli.txt",std::ios::in | std::ios::out | std::ios::ate);
+    		time_t now = time(0);
+   			char* dt = ctime(&now);
+   			file<< "Tanggal Pembelian: " << dt << endl;
     		file<<"|=====================================================================================================================|"<<endl;
         	file<<"|                                             Perumahan Griya Indah Yogya                                             |"<<endl;
         	file<<"|=====================================================================================================================|"<<endl;
@@ -690,8 +709,7 @@ int main(){
         cout<<"Tenor              = "<<cicilan<<" Bulan"<<endl;
         cout<<"Bunga              = "<<bunga/1000<<"rb"<<endl;
         cout<<"Angsuran           = "<<harga/1000000<<"jt/bulan"<<endl;
-        
-        cout<<endl<<endl<<"Konfirmasi y/n ? =";
+        cout<<endl<<"Konfirmasi y/n ? =";
         string y;
         cin>>y;
         //##############################################################################################################################
@@ -699,7 +717,10 @@ int main(){
         //##############################################################################################################################
         if (y=="y" || y=="Y"){
         	ofstream file;
-    		file.open ("struk.txt");
+    		file.open ("Total Pembeli.txt",std::ios::in | std::ios::out | std::ios::ate);
+    		time_t now = time(0);
+   			char* dt = ctime(&now);
+   			file<< "Tanggal Pembelian: " << dt << endl;
     		file<<"|=====================================================================================================================|"<<endl;
         	file<<"|                                             Perumahan Griya Indah Yogya                                             |"<<endl;
         	file<<"|=====================================================================================================================|"<<endl;
@@ -723,7 +744,8 @@ int main(){
         	file<<"Angsuran           = "<<harga/1000000<<"jt/bulan"<<endl;
         	file<<"#####################################################################################################################"<<endl;
 			file<<"                           Terimakasih Telah Membeli Rumah Di Perumahan Griya Indah Yogya !"<<endl;
-			file<<"#####################################################################################################################";
+			file<<"#####################################################################################################################"<<endl<<endl<<endl<<endl<<endl;
+			
         	file.close();
         	pilihwarna(112);
             cout<<"\n\n\n#####################################################################################################################"<<endl;
@@ -744,7 +766,7 @@ int main(){
         }
         else {
         	pilihwarna(132);
-            cout<<"Isi Dengan Benar !";
+            cout<<"Isi Dengan Benar !\n";
             pilihwarna(135);
             cin.clear();
             cin.ignore();
@@ -758,7 +780,7 @@ int main(){
     }
     else {
     	pilihwarna(132);
-        cout<<"isi Dengan Benar !";
+        cout<<"isi Dengan Benar !\n";
         pilihwarna(135);
         cin.clear();
         cin.ignore();
