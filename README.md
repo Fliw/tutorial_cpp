@@ -1,1 +1,21 @@
-Disini Saya Share Tutorial Fundamental C++ Secara Free untuk Orang yang Ingin Mempelajari C++, Kalian Dapat mendownload Tiap Codingan Dengan Keterangan Commit yang Telah Saya Buat.
+## Tutorial C++ And Example
+Berikut Adalah Tutorial Dan Contoh Dari Bahasa Pemograman C++ yang saya pakai saat Kuliah, Tutorial Berada di Folder Tutorial Dan Contoh Berada Di Folder project & Example.
+## List Example
+- Hello World : 1.Hello World.cpp
+- Assigning Variables : 2.AssignVariabel.cpp
+- Input Into Variables : 3.Variabel.cpp
+- Operator Aritmatika : 4.Operator.cpp
+- Operator Assignment : 5.AssignOperator.cpp
+- Statement Kondisional : 6.Percabangan.cpp
+- Komparasi Antar Variabel : 7.Comparator.cpp
+- Kompilasi Operator Dari Input : 8.InputOperator.cpp
+- Looping For,While,Do While : 9.Looping.cpp
+- Switch Case : 10.Switch.cpp
+## List Project & Example
+- Segitiga : Project Segitiga.cpp
+- Faktorial : ProjectFaktorial.cpp
+- Kalkulator : ProjectKalkulator.cpp
+- NestedLoop : ProjectNestedLoop.cpp
+- Min & Max : ProjectNilaiMinimum&Maximum.cpp
+- Project Parkir : ProjectParkir.cpp
+- Final Project Perumahan : ProjectPerumahan.cpp
