@@ -20,4 +20,17 @@ Berikut Adalah Tutorial Dan Contoh Dari Bahasa Pemograman C++ yang saya pakai sa
 - Project Parkir : ProjectParkir.cpp
 - Final Project Perumahan : ProjectPerumahan.cpp
 
+## Todo List
+- Array Index
+- Array Assosiatif
+- Array Multidimensi
+- Pointer Dan Referensi Pointer
+- Sorting Metode Bubble Dan Selection
+- Sorting Metode Insertion
+- Searching Dengan Sort
+- Tipe Data Struct
+- Stack
+- Queue
+- Linked List
+
 -fliw
