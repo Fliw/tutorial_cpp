@@ -10,7 +10,7 @@ Berikut Adalah Tutorial Dan Contoh Dari Bahasa Pemograman C++ yang saya pakai sa
 - Komparasi Antar Variabel : 7.Comparator.cpp
 - Kompilasi Operator Dari Input : 8.InputOperator.cpp
 - Looping For,While,Do While : 9.Looping.cpp
-- Switch Case : 10.Switch.cpp
+- Switch Case : 10.Switch.cpp   
 ## List Project & Example
 - Segitiga : Project Segitiga.cpp
 - Faktorial : ProjectFaktorial.cpp
@@ -20,9 +20,10 @@ Berikut Adalah Tutorial Dan Contoh Dari Bahasa Pemograman C++ yang saya pakai sa
 - Project Parkir : ProjectParkir.cpp
 - Final Project Perumahan : ProjectPerumahan.cpp
 
+## List Example Part 2
+- Array Index : 1.ArrayIndex.cpp
+- Input Array Index : 2.InputArrayIndex.cpp 
 ## Todo List
-- Array Index
-- Array Assosiatif
 - Array Multidimensi
 - Pointer Dan Referensi Pointer
 - Sorting Metode Bubble Dan Selection
