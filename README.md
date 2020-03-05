@@ -22,9 +22,9 @@ Berikut Adalah Tutorial Dan Contoh Dari Bahasa Pemograman C++ yang saya pakai sa
 
 ## List Example Part 2
 - Array Index : 1.ArrayIndex.cpp
-- Input Array Index : 2.InputArrayIndex.cpp 
+- Input Array Index : 2.InputArrayIndex.cpp
+- Array Multidimensi : 3.Multidimensional_array.cpp 
 ## Todo List
-- Array Multidimensi
 - Pointer Dan Referensi Pointer
 - Sorting Metode Bubble Dan Selection
 - Sorting Metode Insertion
