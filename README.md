@@ -28,6 +28,7 @@ Berikut Adalah Tutorial Dan Contoh Dari Bahasa Pemograman C++ yang saya pakai sa
 - [Array Multidimensi](Tutorial2/3.Multidimensional_array.cpp)
 - [Pointer](Tutorial2/4.Pointer.cpp)
 - [Referensi Pointer Dan Dereferensi Pointer](Tutorial2/5.Dereferensi_Pointer.cpp)
+- [Replace Pointer](Tutorial2/6.Replace_Pointer.cpp)
 ## Todo List
 - Sorting Metode Bubble Dan Selection
 - Sorting Metode Insertion
