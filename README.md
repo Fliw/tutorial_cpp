@@ -8,7 +8,7 @@ Berikut Adalah Tutorial Dan Contoh Dari Bahasa Pemograman C++ yang saya pakai sa
 - [Operator Aritmatika](Tutorial/4.Operator.cpp)
 - [Operator Assignment](Tutorial/5.AssignOperator.cpp)
 - [Statement Kondisional](Tutorial/6.Percabangan.cpp)
-- [Komparasi Antar Variabel](Tutorial/7.Comparator.cpp)
+- [Komparasi Antar Variabel](Tutorial/7.Comparator.cpp) 
 - [Kompilasi Operator Dari Input](Tutorial/8.InputOperator.cpp)
 - [Looping For,While,Do While](Tutorial/9.Looping.cpp)
 - [Switch Case](Tutorial/10.Switch.cpp)
@@ -28,7 +28,7 @@ Berikut Adalah Tutorial Dan Contoh Dari Bahasa Pemograman C++ yang saya pakai sa
 - [Array Multidimensi](Tutorial2/3.Multidimensional_array.cpp)
 
 ## Todo List
-- Pointer Dan Referensi Pointer
+- Pointer Dan Referensi/Deferensi Pointer
 - Sorting Metode Bubble Dan Selection
 - Sorting Metode Insertion
 - Searching Dengan Sort
