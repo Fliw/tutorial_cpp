@@ -12,4 +12,5 @@ int main (){
     cout<<&nama<<endl;
     //pointer di outputkan dalam bentuk variabel
     cout<<PointerNama;
+    //Keep Code Devs ! ^-^
 }

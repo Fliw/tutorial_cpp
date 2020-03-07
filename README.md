@@ -26,9 +26,9 @@ Berikut Adalah Tutorial Dan Contoh Dari Bahasa Pemograman C++ yang saya pakai sa
 - [Array Index](Tutorial2/1.ArrayIndex.cpp)
 - [Input Array Index](Tutorial2/2.InputArrayIndex.cpp)
 - [Array Multidimensi](Tutorial2/3.Multidimensional_array.cpp)
-
+- [Pointer](Tutorial2/4.Pointer.cpp)
+- [Referensi Pointer Dan Dereferensi Pointer](Tutorial2/5.Dereferensi_Pointer.cpp)
 ## Todo List
-- Pointer Dan Referensi/Deferensi Pointer
 - Sorting Metode Bubble Dan Selection
 - Sorting Metode Insertion
 - Searching Dengan Sort
