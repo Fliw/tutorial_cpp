@@ -29,8 +29,10 @@ Berikut Adalah Tutorial Dan Contoh Dari Bahasa Pemograman C++ yang saya pakai sa
 - [Pointer](Tutorial2/4.Pointer.cpp)
 - [Referensi Pointer Dan Dereferensi Pointer](Tutorial2/5.Dereferensi_Pointer.cpp)
 - [Replace Pointer](Tutorial2/6.Replace_Pointer.cpp)
+- [Fungsi](Tutorial2/7.Fungsi.cpp)
+- [Cek Panjang Karakter Menggunakan Pointer](Tutorial2/8.Cek_Length_Dengan_Pointer.cpp)
+- [Looping Array Dengan Pointer](Tutorial2/9.Looping_Dengan_Array.cpp)
 ## Todo List
-- Fungsi
 - Sorting Metode Bubble Dan Selection
 - Sorting Metode Insertion
 - Searching Dengan Sort
