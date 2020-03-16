@@ -30,6 +30,7 @@ Berikut Adalah Tutorial Dan Contoh Dari Bahasa Pemograman C++ yang saya pakai sa
 - [Referensi Pointer Dan Dereferensi Pointer](Tutorial2/5.Dereferensi_Pointer.cpp)
 - [Replace Pointer](Tutorial2/6.Replace_Pointer.cpp)
 ## Todo List
+- Fungsi
 - Sorting Metode Bubble Dan Selection
 - Sorting Metode Insertion
 - Searching Dengan Sort
