@@ -34,6 +34,7 @@ Berikut Adalah Tutorial Dan Contoh Dari Bahasa Pemograman C++ yang saya pakai sa
 - [Looping Array Dengan Pointer](Tutorial2/9.Looping_Dengan_Array.cpp)
 - [Searching Metode Sekuential](Tutorial2/10.Metode_Search_1.cpp)
 - [Searching Metode Binary](Tutorial2/11.Metode_Search_2.cpp)
+- [Menghitung Kalimat dan Kata Pada String Dengan Pointer](Tutorial2/12.Menghitung_Kalimat.cpp)
 
 ## Todo List
 - Sorting Metode Bubble Dan Selection
