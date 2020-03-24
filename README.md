@@ -36,6 +36,8 @@ Berikut Adalah Tutorial Dan Contoh Dari Bahasa Pemograman C++ yang saya pakai sa
 - [Searching Metode Binary](Tutorial2/11.Metode_Search_2.cpp)
 - [Menghitung Kalimat dan Kata Pada String Dengan Pointer](Tutorial2/12.Menghitung_Kalimat.cpp)
 - [Min dan Max Dalam Pointer](Tutorial2/13.MinMax_Pointer.cpp)
+- [Alokasi Dan Dealokasi Memori Dinamis 1](Tutorial2/14.MemoriDinamis.cpp)
+- [Alokasi Dan Dealokasi Memori Dinamis 2](Tutorial2/15.MemoriDinamis2.cpp)
 
 ## Todo List
 - Sorting Metode Bubble Dan Selection
