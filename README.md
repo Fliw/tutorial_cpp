@@ -38,10 +38,11 @@ Berikut Adalah Tutorial Dan Contoh Dari Bahasa Pemograman C++ yang saya pakai sa
 - [Min dan Max Dalam Pointer](Tutorial2/13.MinMax_Pointer.cpp)
 - [Alokasi Dan Dealokasi Memori Dinamis 1](Tutorial2/14.MemoriDinamis.cpp)
 - [Alokasi Dan Dealokasi Memori Dinamis 2](Tutorial2/15.MemoriDinamis2.cpp)
+- [Metodologi Search Dalam Array](Tutorial2/16.SearchDalamArray.cpp)
+- [Metodologi Search String Binary](Tutorial2/17.BinarySearchString.cpp)
+- [Sorting Bubble,Selection,Insertion with ASC/DESC](Tutorial2/18.SortFinal.cpp)
 
 ## Todo List
-- Sorting Metode Bubble Dan Selection
-- Sorting Metode Insertion
 - Tipe Data Struct
 - Stack
 - Queue
