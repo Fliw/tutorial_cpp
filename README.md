@@ -41,9 +41,10 @@ Berikut Adalah Tutorial Dan Contoh Dari Bahasa Pemograman C++ yang saya pakai sa
 - [Metodologi Search Dalam Array](Tutorial2/16.SearchDalamArray.cpp)
 - [Metodologi Search String Binary](Tutorial2/17.BinarySearchString.cpp)
 - [Sorting Bubble,Selection,Insertion with ASC/DESC](Tutorial2/18.SortFinal.cpp)
+- [Introduksi Struct](Tutorial2/19.Struct.cpp)
+- [Input Output Menggunakan Array of Struct](Tutorial2/20.IOStruct.cpp)
 
 ## Todo List
-- Tipe Data Struct
 - Stack
 - Queue
 - Linked List
