@@ -17,12 +17,13 @@ void print_judul(game &baru);
 int main()
 {
     //deklarasi array of struct dengan 20 struct
-    game baru[20];
+    
     int jumlah, pilihan;
     system("cls");
     cout << "Aplikasi Input Data Elektronik" << endl;
     cout << "Masukkan Jumlah Data Yang Akan Diinput = ";
     cin >> jumlah;
+    game baru[jumlah];
     //looping input
     for (int x = 0; x < jumlah; x++)
     {
