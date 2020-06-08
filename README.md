@@ -62,10 +62,10 @@ Kemudian Klik Enter, Dan Jalankan Filenya :
 - [Sorting Bubble,Selection,Insertion with ASC/DESC](Tutorial2/18.SortFinal.cpp)
 - [Introduksi Struct](Tutorial2/19.Struct.cpp)
 - [Input Output Menggunakan Array of Struct](Tutorial2/20.IOStruct.cpp)
+- [Queue / Antrian](Tutorial2/21.queue.cpp)
 
 ### Todo List
 - Stack
-- Queue
 - Linked List
 
 -fliw
