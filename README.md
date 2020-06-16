@@ -1,4 +1,4 @@
-![logo](https://i0.wp.com/kevinurielfonseca.com/wp-content/uploads/2019/09/C.jpg?fit=1873%2C900&ssl=1)
+![logo](https://i0.wp.com/kevinurielfonseca.com/wp-content/uploads/2019/09/C.jpg?fit=1873%2C900&ssl=1?logo=C++)
 ![lang](https://img.shields.io/badge/Lang-C%2B%2B-orange)
 ![forks](https://img.shields.io/github/forks/Fliw/tutorial_cpp)
 ![stars](https://img.shields.io/github/stars/Fliw/tutorial_cpp)
