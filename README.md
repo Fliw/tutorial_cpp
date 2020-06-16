@@ -2,10 +2,9 @@
 ![lang](https://img.shields.io/badge/Lang-C%2B%2B-orange)
 ![forks](https://img.shields.io/github/forks/Fliw/tutorial_cpp)
 ![stars](https://img.shields.io/github/stars/Fliw/tutorial_cpp)
-![license](https://img.shields.io/github/license/Fliw/tutorial_cpp)
-![twitter](https://img.shields.io/twitter/url?url=https%3A%2F%2Fgithub.com%2FFliw%2Ftutorial_cpp
-)
 ![issues](https://img.shields.io/github/issues/Fliw/tutorial_cpp)
+![made](https://img.shields.io/badge/Made-VSCode-blue)
+![author](https://img.shields.io/badge/Author-Fliw-red)
 # Tutorial C++ And Example
 Berikut Adalah Tutorial Dan Contoh Dari Bahasa Pemograman C++ yang saya pakai saat Kuliah, Tutorial Berada di Folder Tutorial Dan Contoh Berada Di Folder project & Example.
 
