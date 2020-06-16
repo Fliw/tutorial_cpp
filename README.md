@@ -1,4 +1,5 @@
 ![logo](https://i0.wp.com/kevinurielfonseca.com/wp-content/uploads/2019/09/C.jpg?fit=1873%2C900&ssl=1)
+![lang](https://img.shields.io/badge/Lang-C%2B%2B-orange)
 # Tutorial C++ And Example
 Berikut Adalah Tutorial Dan Contoh Dari Bahasa Pemograman C++ yang saya pakai saat Kuliah, Tutorial Berada di Folder Tutorial Dan Contoh Berada Di Folder project & Example.
 
