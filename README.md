@@ -3,7 +3,7 @@
 ![forks](https://img.shields.io/github/forks/Fliw/tutorial_cpp)
 ![stars](https://img.shields.io/github/stars/Fliw/tutorial_cpp)
 ![issues](https://img.shields.io/github/issues/Fliw/tutorial_cpp)
-![made](https://img.shields.io/badge/Made-VSCode-blue)
+![made](https://img.shields.io/badge/Made-VSCode-blue?logo=visual-studio-code)
 ![compiler](https://img.shields.io/badge/Compiler-GCC-yellow)
 ![author](https://img.shields.io/badge/Author-Fliw-red)
 # Tutorial C++ And Example
