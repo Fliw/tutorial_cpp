@@ -1,10 +1,10 @@
 ![logo](https://i0.wp.com/kevinurielfonseca.com/wp-content/uploads/2019/09/C.jpg?fit=1873%2C900&ssl=1)
-![lang](https://img.shields.io/badge/Lang-C%2B%2B-orange?style=flat&logo=c++)
+![lang](https://img.shields.io/badge/Lang-C%2B%2B-orange?logo=c%2B%2B)
 ![forks](https://img.shields.io/github/forks/Fliw/tutorial_cpp)
 ![stars](https://img.shields.io/github/stars/Fliw/tutorial_cpp)
 ![issues](https://img.shields.io/github/issues/Fliw/tutorial_cpp)
 ![license](https://img.shields.io/github/license/Fliw/tutorial_cpp?label=License)
-![made](https://img.shields.io/badge/Made-VSCode-blue?logo=visual-studio-code)
+![Code Editor](https://img.shields.io/badge/Made-VSCode-blue?logo=visual-studio-code)
 ![compiler](https://img.shields.io/badge/Compiler-GCC-yellow)
 ![author](https://img.shields.io/badge/Author-Fliw-red)
 # Tutorial C++ And Example
