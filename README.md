@@ -6,6 +6,7 @@
 ![license](https://img.shields.io/github/license/Fliw/tutorial_cpp?label=License)
 ![Code Editor](https://img.shields.io/badge/Made-VSCode-blue?logo=visual-studio-code)
 ![compiler](https://img.shields.io/badge/Compiler-GCC-yellow)
+[![time tracker](https://wakatime.com/badge/github/Fliw/tutorial_cpp.svg)](https://wakatime.com/badge/github/Fliw/tutorial_cpp)
 ![author](https://img.shields.io/badge/Author-Fliw-red)
 # Tutorial C++ And Example
 Berikut Adalah Tutorial Dan Contoh Dari Bahasa Pemograman C++ yang saya pakai saat Kuliah, Tutorial Berada di Folder Tutorial Dan Contoh Berada Di Folder project & Example.
