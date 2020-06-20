@@ -64,5 +64,4 @@ Kemudian Klik Enter, Dan Jalankan Filenya :
 - [Input Output Menggunakan Array of Struct](Tutorial2/20.IOStruct.cpp)
 - [Queue / Antrian](Tutorial2/21.queue.cpp)
 - [Stack / Tumpukan](Tutorial2/22.stack.cpp)
-### Todo List
-- Linked List
+- [Linked List](Tutorial2/23.LinkedList.cpp)
